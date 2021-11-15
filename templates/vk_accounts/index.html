@@ -3,6 +3,15 @@
 
 {% block title %}Skydash Admin{% endblock %}
 
+<!-- Plugin css for this page -->
+{% block plugin_css_for_this_pages %}
+    <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">
+{% endblock %}
+<!-- End plugin css for this page -->
+
+
 
 {% block main_panel %}
     <!-- partial -->
@@ -42,6 +51,8 @@
                     <div class="card tale-bg">
                         <div class="card-people mt-auto">
                             <img src="{% static 'images/dashboard/people.svg' %}" alt="people">
+
+                            <!--- Weather info -->
                             <div class="weather-info">
                                 <div class="d-flex">
                                     <div>
@@ -54,6 +65,8 @@
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -787,9 +800,9 @@
     <!-- main-panel ends -->
 
 {% endblock %}
-{% block plugin_for_this_page %}
-    <script src="{% static 'vendors/chart.js/Chart.min.js'%}"></script>
-    <script src="{% static 'vendors/datatables.net/jquery.dataTables.js'%}"></script>
+{% block plugin_js_for_this_page %}
+    <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
     <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
     <script src="{% static 'js/dataTables.select.min.js' %}"></script>
 {% endblock %}

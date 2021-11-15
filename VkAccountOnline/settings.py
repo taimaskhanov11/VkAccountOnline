@@ -26,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'django_celery_results',
     'app_vk_controller.apps.AppVkControllerConfig',
 
 ]
@@ -75,7 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'VkAccountOnline.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -136,9 +133,6 @@ LOGGING = {
     },
 }
 
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -157,7 +151,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -171,6 +164,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -189,3 +185,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CELERY_TASK_TRACK_STARTED = True
 # CELERY_RESULT_BACKEND = 'django-db'
 # CELERY_CACHE_BACKEND = 'default'
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
