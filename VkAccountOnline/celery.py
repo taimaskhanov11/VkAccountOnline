@@ -1,22 +1,25 @@
+"""
+Файл настроек Celery
+https://docs.celeryproject.org/en/stable/django/first-steps-with-django.html
+"""
+from __future__ import absolute_import
 import os
-
 from celery import Celery
 
-# Set the default Django settings module for the 'celery' program.
+# этот код скопирован с manage.py
+# он установит модуль настроек по умолчанию Django для приложения 'celery'.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'VkAccountOnline.settings')
 
-app = Celery('VkAccountOnline')
+# здесь вы меняете имя
+app = Celery("VkAccountOnline")
 
-# Using a string here means the worker doesn't have to serialize
-# the configuration object to child processes.
-# - namespace='CELERY' means all celery-related configuration keys
-# should have a `CELERY_` prefix.
+# Для получения настроек Django, связываем префикс "CELERY" с настройкой celery
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-# Load task modules from all registered Django apps.
+# загрузка tasks.py в приложение django
 app.autodiscover_tasks()
 
 
-@app.task(bind=True)
-def debug_task(self):
-    print(f'Request: {self.request!r}')
+@app.task
+def add(x, y):
+    return x / y

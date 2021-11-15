@@ -6,18 +6,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% block title %}{% endblock %}</title>
+
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
     <!-- plugins:css -->
     <link rel="stylesheet" href="{% static 'vendors/feather/feather.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
     <!-- endinject -->
-    <!-- Plugin css for this page -->
 
-    <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
-    <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">
+    <!-- Plugin css for this page -->
+    {% block plugin_css_for_this_pages %}
+    {% endblock %}
     <!-- End plugin css for this page -->
+
     <!-- inject:css -->
     <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.css' %}">
     <!-- endinject -->
@@ -25,34 +29,38 @@
 </head>
 
 <body>
-<div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
-    {% include '_inc/_navbar.html' %}
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_settings-panel.html -->
-        {% include '_inc/_settings-panel.html' %}
-        <!-- partial -->
+{% block body %}
 
-        <!-- partial:partials/_sidebar.html -->
-        {% include '_inc/_sidebar.html' %}
-
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        {% include '_inc/_navbar.html' %}
         <!-- partial -->
-        {% block main_panel %}
-        {% endblock %}
-        <!-- main-panel ends -->
-        {#todo footer#}
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_settings-panel.html -->
+            {% include '_inc/_settings-panel.html' %}
+            <!-- partial -->
+
+            <!-- partial:partials/_sidebar.html -->
+            {% include '_inc/_sidebar.html' %}
+
+            <!-- partial -->
+            {% block main_panel %}
+            {% endblock %}
+            <!-- main-panel ends -->
+            {#todo footer#}
+        </div>
+        <!-- page-body-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
+    <!-- container-scroller -->
+
+{% endblock %}
 
 <!-- plugins:js -->
 <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
 <!-- endinject -->
 
 <!-- Plugin js for this page -->
-{% block plugin_for_this_page %}
+{% block plugin_js_for_this_page %}
 {% endblock %}
 <!-- End plugin js for this page -->
 
