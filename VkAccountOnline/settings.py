@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'django_filters',
     'debug_toolbar',
     'app_vk_controller.apps.AppVkControllerConfig',
 
@@ -83,13 +85,13 @@ CACHES = {
     #     'LOCATION': Path(BASE_DIR, 'django_cache'),
     # 'TIMEOUT': 10800
     # },
-    # 'default': {
-    #     'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    # },
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'TIMEOUT': 60 * 60 * 1
-    }
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    },
+    # 'default': {
+    #     'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    #     'TIMEOUT': 60 * 60 * 1
+    # }
 }
 
 DATABASES = {
@@ -111,7 +113,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'format': '{levelname} [{asctime}] [{module}] > {message} ({process:d} {thread:d})',
             'style': '{',
         },
     },
@@ -121,7 +123,13 @@ LOGGING = {
         },
         'file': {
             'class': 'logging.FileHandler',
-            'filename': 'info.log',
+            'filename': f'{BASE_DIR}/logs/main.log',
+            "encoding": "utf-8",
+            'formatter': 'verbose'
+        },
+        'file_controller': {
+            'class': 'logging.FileHandler',
+            'filename': f'{BASE_DIR}/controller.log',
             "encoding": "utf-8",
             'formatter': 'verbose'
         },
@@ -131,6 +139,10 @@ LOGGING = {
         'level': 'DEBUG',
 
     },
+    'controller': {
+        'handlers': ['file_controller'],
+        'level': 'DEBUG'
+    }
 }
 
 # Password validation
@@ -151,6 +163,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # 'rest_framework.permissions.AllowAny'
+    # ]
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -163,7 +189,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -187,3 +212,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CELERY_CACHE_BACKEND = 'default'
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
+INTERNAL_IPS = [
+    '127.0.0.1',
+]

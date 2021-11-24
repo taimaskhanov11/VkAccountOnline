@@ -6,6 +6,21 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
+
+        <li class="nav-item {{ vk_accounts_active }}">
+            <a class="nav-link" data-toggle="collapse" href="#vk_accounts" aria-controls="vk_accounts">
+                <i class="mdi mdi-account-multiple menu-icon"></i>
+                <span class="menu-title">Vk Accounts</span>
+            </a>
+            <div class="collapse {{ vk_accounts_show }}" id="vk_accounts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'my_accs' %}">My Accounts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'last_messages' %}">Last Messages</a></li>
+                </ul>
+            </div>
+        </li>
+
+
         <li class="nav-item {{ ui_elements_active }}">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="icon-layout menu-icon"></i>

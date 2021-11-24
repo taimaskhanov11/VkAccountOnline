@@ -1,10 +1,25 @@
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
+from rest_framework import routers
 
 from app_vk_controller import views
-# app_name = 'app_vk_controller'
+from app_vk_controller.api import AccountViewSet, UserViewSet, MessageViewSet
+
+router = routers.DefaultRouter()
+router.register('accounts', AccountViewSet)
+router.register('users', UserViewSet)
+router.register('messages', MessageViewSet)
+
 urlpatterns = [
+
     path('', views.HomeView.as_view(), name='home'),
+    path('api/', include(router.urls)),
+
+    # path('vk-accounts/', views.VkAccLastMessageView.as_view(), name='vk_accounts'),
+    path('vk-accounts/my-accs', views.VkAccMyAccView.as_view(), name='my_accs'),
+    path('vk-accounts/last_messages', views.VkAccLastMessageView.as_view(), name='last_messages'),
+    # path('vk-accounts/last_messages', views.VkAccountsView.as_view(), name='vk_accounts'),
+
     path('buttons/', views.ButtonsView.as_view(), name='buttons'),
     path('dropdowns/', views.DropdownsView.as_view(), name='dropdowns'),
     path('typography/', views.TypographyView.as_view(), name='typography'),
@@ -19,4 +34,6 @@ urlpatterns = [
     path('documentation/', views.DocumentationView.as_view(), name='documentation'),
 
     path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),
+
+    path('vk-accounts/data/', views.get_custom_data, name='custom_data')  # todo
 ]

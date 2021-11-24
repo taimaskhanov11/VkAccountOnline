@@ -8,3 +8,5 @@ from django.views import View
 class RegisterView(View):
     def get(self, request):
         return render(request, 'registration/register.html')
+
+

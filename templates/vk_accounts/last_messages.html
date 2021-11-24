@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    Basic Table
+{% endblock %}
+
+{#{% block plugin_css_for_this_pages %}#}
+{#    <link rel="stylesheet" href="{% static 'vendors/select2/select2.min.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css' %}">#}
+{#{% endblock %}#}
+{% block custom_plugin_css_for_this_page %}
+    <link rel="stylesheet" href="{% static 'custom_css/loading_icons.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'custom_css/main.css' %}">#}
+{% endblock %}
+
+
+{% block main_panel %}
+    {% show_last_messages %}
+{% endblock %}
+
+{% block custom_js_for_this_page %}
+    <script src="{% static 'custom_js/last_message.js' %}"></script> #todo
+    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+{% endblock %}
+
+
+{#{% block plugin_js_for_this_page %}#}
+{#    <script src="{% static 'vendors/typeahead.js/typeahead.bundle.min.js' %}"></script>#}
+{#    <script src="{% static 'vendors/select2/select2.min.js' %}"></script>#}
+{#{% endblock %}#}
+{##}
+{#{% block custom_js_for_this_page %}#}
+{#    <script src="{% static 'js/file-upload.js' %}"></script>#}
+{#    <script src="{% static 'js/typeahead.js' %}"></script>#}
+{#    <script src="{% static 'js/select2.js' %}"></script>#}
+{#{% endblock %}#}

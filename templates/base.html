@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
     <!-- endinject -->
 
+    <!-- Custom plugin css for this page todo -->
+    {% block custom_plugin_css_for_this_page %}
+    {% endblock %}
+    <!--End custom plugin css for this page -->
+
+    <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}"> <!--#todo-->
+
+
     <!-- Plugin css for this page -->
     {% block plugin_css_for_this_pages %}
     {% endblock %}
@@ -47,8 +55,10 @@
             {% block main_panel %}
             {% endblock %}
             <!-- main-panel ends -->
-            {#todo footer#}
+{#            todo footer#}
         </div>
+            {% include '_inc/_footer.html' %}
+
         <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
