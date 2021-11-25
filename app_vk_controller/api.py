@@ -17,7 +17,7 @@ class AccountViewSet(viewsets.ModelViewSet):
     filterset_fields = '__all__'
 
 
-class MessageViewSetOLD(viewsets.ModelViewSet): #todo
+class MessageViewSet(viewsets.ModelViewSet): #todo
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]
@@ -25,19 +25,6 @@ class MessageViewSetOLD(viewsets.ModelViewSet): #todo
     search_fields = '__all__'
     ordering_fields = '__all__'
 
-class MessageViewSet(mixins.ListModelMixin,
-                     viewsets.GenericViewSet):  # todo
-
-    queryset = Message.objects.all()
-    serializer_class = MessageSerializer
-
-    def get(self, request):
-        message = Message.objects.all().select_related('account')
-        # user =
-        # account =
-
-        serializer = MessageSerializer(data = message, many=True)
-        return Response(serializer.data)
 
 
     # permission_classes = [permissions.IsAuthenticated]

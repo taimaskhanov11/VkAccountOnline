@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ account.name }}
+{% endblock %}
+
+{% block main_panel %}
+    <div class="content-wrapper">
+        <div class="row">
+            {% for foo in 3|create_range %}
+                <div class="col-md-4 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Headings</h2>
+                            <img style="border-radius: 50%; border: 1px #cfc solid; box-shadow: 0 0 10px #444;"
+                                 class="img-rounded" width="50"
+                                 src="https://sun9-40.userapi.com/impg/c855024/v855024934/1934e2/Kg5EaCDamRw.jpg?size=599x600&quality=96&sign=0ab42417ad87f778c55e435caa339695&type=album"
+                                 alt="">
+                            <h2 class="display-3" style="display: inline-block">h2. Heading</h2>
+                            <br>
+                            <br>
+
+                            <h4 style="display: inline-block;float: left;width:50%" class="display-6">Пользователей</h4>
+                            <h4 style="display: inline-block;float: right;" class="display-6">1</h4>
+
+                            <h4 style="display: inline-block;width:50%" class="display-6">Всего сообщений</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6">2</h4>
+
+                            <h4 style="display: inline-block;width:51%" class="display-6">Получено номеров</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6">3</h4>
+
+                            <h4 style="display: inline-block;width:50%" class="display-6">Статус</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6 badge badge-danger">blocked</h4>
+
+                            <h5 style="display: inline-block;width:60%;float: left" class="display-7">Последнее сообщение</h5>
+                            <h6 style="display: inline-block;float: right" class="display-6">12.06.2021 15:00</h6>
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+
+            <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Headings</h4>
+                        <p class="card-description">
+                            Add tags <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> or class <code>.h1</code> to
+                            <code>.h6</code>
+                        </p>
+                        <div class="template-demo">
+                            <h1>h1. Heading</h1>
+                            <h2>h2. Heading</h2>
+                            <h3>h3. Heading</h3>
+                            <h4>h4. Heading</h4>
+                            <h5>h5. Heading</h5>
+                            <h6>h6. Heading</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Icon size</h4>
+                        <p class="card-description">
+                            Add class <code>.icon-lg</code>, <code>.icon-md</code>, <code>.icon-sm</code>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="ti-package icon-lg text-warning"></i>
+                                    <p class="mb-0 ml-1">
+                                        Icon-lg
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="ti-package icon-md text-success"></i>
+                                    <p class="mb-0 ml-1">
+                                        Icon-md
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="ti-package icon-sm text-danger"></i>
+                                    <p class="mb-0 ml-1">
+                                        Icon-sm
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

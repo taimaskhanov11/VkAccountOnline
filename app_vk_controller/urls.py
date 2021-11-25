@@ -16,8 +16,11 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     # path('vk-accounts/', views.VkAccLastMessageView.as_view(), name='vk_accounts'),
-    path('vk-accounts/my-accs', views.VkAccMyAccView.as_view(), name='my_accs'),
-    path('vk-accounts/last_messages', views.VkAccLastMessageView.as_view(), name='last_messages'),
+    path('my-accounts/', views.MyAccView.as_view(), name='my_accounts'),
+    path('my-accounts/<pk>/', views.AccountDetailView.as_view(), name='account_detail'),
+
+    path('last_messages/', views.LastMessageListView.as_view(), name='last_messages'),
+
     # path('vk-accounts/last_messages', views.VkAccountsView.as_view(), name='vk_accounts'),
 
     path('buttons/', views.ButtonsView.as_view(), name='buttons'),
@@ -35,5 +38,5 @@ urlpatterns = [
 
     path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),
 
-    path('vk-accounts/data/', views.get_custom_data, name='custom_data')  # todo
+    path('vk-accounts/data/', views.get_custom_data, name='custom_data')  # todo убрать начало
 ]

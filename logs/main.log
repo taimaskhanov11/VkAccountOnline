@@ -20636,3 +20636,381 @@ Traceback (most recent call last):
 django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "message-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
 INFO [2021-11-24 19:35:00,934] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\api.py changed, reloading. (4532 23364)
 INFO [2021-11-24 19:35:01,944] [autoreload] > Watching for file changes with StatReloader (30244 1276)
+INFO [2021-11-25 13:26:07,624] [autoreload] > Watching for file changes with StatReloader (22380 18044)
+INFO [2021-11-25 13:28:08,373] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\api.py changed, reloading. (22380 18044)
+INFO [2021-11-25 13:28:09,016] [autoreload] > Watching for file changes with StatReloader (6600 304)
+DEBUG [2021-11-25 13:28:14,776] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (6600 16320)
+DEBUG [2021-11-25 13:28:14,816] [core] > Successfully imported extension module "markdown.extensions.toc". (6600 20348)
+DEBUG [2021-11-25 13:28:14,816] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (6600 20348)
+WARNING [2021-11-25 13:28:14,853] [log] > Not Found: /favicon.ico (6600 1108)
+INFO [2021-11-25 13:36:11,623] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\serializers.py changed, reloading. (6600 304)
+INFO [2021-11-25 13:36:12,263] [autoreload] > Watching for file changes with StatReloader (348 7308)
+DEBUG [2021-11-25 13:36:13,271] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 21812)
+WARNING [2021-11-25 13:36:20,247] [log] > Not Found: /vk-accounts/[object Object] (348 21812)
+WARNING [2021-11-25 13:36:26,259] [log] > Not Found: /vk-accounts/[object Object] (348 21812)
+DEBUG [2021-11-25 13:48:10,202] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7912)
+DEBUG [2021-11-25 13:49:23,387] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7912)
+WARNING [2021-11-25 13:49:31,428] [log] > Not Found: /vk-accounts/[object Object] (348 7060)
+WARNING [2021-11-25 13:49:46,187] [log] > Not Found: /vk-accounts/[object Object] (348 7060)
+DEBUG [2021-11-25 13:49:50,243] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7060)
+WARNING [2021-11-25 13:49:59,022] [log] > Not Found: /vk-accounts/[object Object] (348 9328)
+WARNING [2021-11-25 13:50:04,606] [log] > Not Found: /vk-accounts/[object Object] (348 9328)
+WARNING [2021-11-25 13:50:11,419] [log] > Not Found: /vk-accounts/[object Object] (348 9328)
+WARNING [2021-11-25 13:50:17,459] [log] > Not Found: /vk-accounts/[object Object] (348 9328)
+WARNING [2021-11-25 13:50:23,759] [log] > Not Found: /vk-accounts/[object Object] (348 19016)
+DEBUG [2021-11-25 13:50:27,056] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 19016)
+DEBUG [2021-11-25 13:51:37,503] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17200)
+DEBUG [2021-11-25 13:52:52,868] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 6512)
+DEBUG [2021-11-25 13:53:11,373] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 15556)
+DEBUG [2021-11-25 13:53:13,132] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 19732)
+DEBUG [2021-11-25 13:53:20,133] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 9328)
+DEBUG [2021-11-25 13:54:22,195] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 8208)
+DEBUG [2021-11-25 13:56:40,521] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 5708)
+DEBUG [2021-11-25 13:57:43,224] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10852)
+DEBUG [2021-11-25 14:01:00,367] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 21308)
+DEBUG [2021-11-25 14:02:07,201] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 9768)
+DEBUG [2021-11-25 14:02:50,726] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17768)
+DEBUG [2021-11-25 14:04:03,652] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 16276)
+DEBUG [2021-11-25 14:04:37,653] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 3388)
+DEBUG [2021-11-25 14:04:42,528] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13004)
+DEBUG [2021-11-25 14:06:32,293] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 9408)
+DEBUG [2021-11-25 14:07:28,983] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 8672)
+DEBUG [2021-11-25 14:11:39,472] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 22196)
+DEBUG [2021-11-25 14:11:47,903] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 11748)
+DEBUG [2021-11-25 14:11:51,705] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 11128)
+DEBUG [2021-11-25 14:12:19,372] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 8076)
+DEBUG [2021-11-25 14:12:53,785] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17692)
+DEBUG [2021-11-25 14:15:22,389] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7040)
+DEBUG [2021-11-25 14:15:55,632] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 5000)
+DEBUG [2021-11-25 14:17:07,311] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 18764)
+DEBUG [2021-11-25 14:17:25,778] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7656)
+DEBUG [2021-11-25 14:23:11,541] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 20892)
+DEBUG [2021-11-25 14:24:20,156] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 19612)
+DEBUG [2021-11-25 14:27:07,306] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10688)
+DEBUG [2021-11-25 14:28:12,299] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10688)
+DEBUG [2021-11-25 14:29:00,207] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 19796)
+DEBUG [2021-11-25 14:29:38,300] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 6804)
+DEBUG [2021-11-25 14:30:40,157] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 21368)
+DEBUG [2021-11-25 14:33:04,094] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10688)
+DEBUG [2021-11-25 14:33:24,126] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10688)
+DEBUG [2021-11-25 14:37:28,425] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:37:57,935] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:29,154] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:32,362] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:38,952] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:56,489] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:57,226] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:38:59,664] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:39:00,309] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 13696)
+DEBUG [2021-11-25 14:39:04,999] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 12264)
+DEBUG [2021-11-25 14:39:11,026] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17024)
+DEBUG [2021-11-25 14:39:38,849] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17024)
+DEBUG [2021-11-25 14:45:08,099] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17024)
+DEBUG [2021-11-25 14:45:39,115] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 10588)
+DEBUG [2021-11-25 14:45:53,948] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 6116)
+DEBUG [2021-11-25 14:46:09,124] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 7124)
+DEBUG [2021-11-25 14:49:36,609] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 11768)
+WARNING [2021-11-25 14:49:49,037] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,134] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,233] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,330] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,426] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,526] [log] > Not Found: /vk-accounts/[object Object] (348 17012)
+WARNING [2021-11-25 14:49:49,624] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,734] [log] > Not Found: /vk-accounts/[object Object] (348 17012)
+WARNING [2021-11-25 14:49:49,841] [log] > Not Found: /vk-accounts/[object Object] (348 18256)
+WARNING [2021-11-25 14:49:49,957] [log] > Not Found: /vk-accounts/[object Object] (348 17012)
+WARNING [2021-11-25 14:49:58,693] [log] > Not Found: /vk-accounts/[object Object] (348 17012)
+DEBUG [2021-11-25 14:50:03,625] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 17012)
+WARNING [2021-11-25 14:50:12,137] [log] > Not Found: /vk-accounts/[object Object] (348 15692)
+WARNING [2021-11-25 14:50:12,241] [log] > Not Found: /vk-accounts/[object Object] (348 20424)
+WARNING [2021-11-25 14:50:12,357] [log] > Not Found: /vk-accounts/[object Object] (348 15692)
+WARNING [2021-11-25 14:50:12,473] [log] > Not Found: /vk-accounts/[object Object] (348 20424)
+WARNING [2021-11-25 14:50:12,580] [log] > Not Found: /vk-accounts/[object Object] (348 15692)
+WARNING [2021-11-25 14:50:12,679] [log] > Not Found: /vk-accounts/[object Object] (348 20424)
+WARNING [2021-11-25 14:50:12,777] [log] > Not Found: /vk-accounts/[object Object] (348 15692)
+WARNING [2021-11-25 14:50:12,874] [log] > Not Found: /vk-accounts/[object Object] (348 20424)
+WARNING [2021-11-25 14:50:12,976] [log] > Not Found: /vk-accounts/[object Object] (348 15692)
+WARNING [2021-11-25 14:50:13,128] [log] > Not Found: /vk-accounts/[object Object] (348 20424)
+DEBUG [2021-11-25 14:51:05,338] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 20424)
+DEBUG [2021-11-25 14:51:52,954] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 4556)
+DEBUG [2021-11-25 14:54:19,893] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 18468)
+DEBUG [2021-11-25 14:55:07,313] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 140)
+DEBUG [2021-11-25 14:55:52,103] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 8592)
+DEBUG [2021-11-25 14:56:33,092] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 1336)
+DEBUG [2021-11-25 15:00:38,384] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 14412)
+DEBUG [2021-11-25 15:00:42,733] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 3688)
+DEBUG [2021-11-25 15:01:15,166] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 19444)
+DEBUG [2021-11-25 15:01:30,864] [core] > Successfully imported extension module "markdown.extensions.toc". (348 4576)
+DEBUG [2021-11-25 15:01:30,864] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (348 4576)
+DEBUG [2021-11-25 15:01:36,046] [core] > Successfully imported extension module "markdown.extensions.toc". (348 4576)
+DEBUG [2021-11-25 15:01:36,046] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (348 4576)
+DEBUG [2021-11-25 15:03:34,686] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (348 4576)
+INFO [2021-11-25 15:05:19,780] [autoreload] > Watching for file changes with StatReloader (8784 14452)
+DEBUG [2021-11-25 15:05:22,463] [core] > Successfully imported extension module "markdown.extensions.toc". (8784 3152)
+DEBUG [2021-11-25 15:05:22,463] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (8784 3152)
+DEBUG [2021-11-25 15:05:29,645] [core] > Successfully imported extension module "markdown.extensions.toc". (8784 3152)
+DEBUG [2021-11-25 15:05:29,645] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (8784 3152)
+WARNING [2021-11-25 15:05:29,797] [log] > Not Found: /api/messages/1/ (8784 3152)
+DEBUG [2021-11-25 15:05:32,689] [core] > Successfully imported extension module "markdown.extensions.toc". (8784 3152)
+DEBUG [2021-11-25 15:05:32,689] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (8784 3152)
+DEBUG [2021-11-25 15:05:36,689] [core] > Successfully imported extension module "markdown.extensions.toc". (8784 3152)
+DEBUG [2021-11-25 15:05:36,689] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (8784 3152)
+DEBUG [2021-11-25 15:05:42,568] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 3152)
+DEBUG [2021-11-25 15:06:22,781] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 18456)
+DEBUG [2021-11-25 15:09:46,514] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 9500)
+DEBUG [2021-11-25 15:10:46,915] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 4044)
+DEBUG [2021-11-25 15:12:09,502] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 11272)
+DEBUG [2021-11-25 15:14:21,403] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 17580)
+DEBUG [2021-11-25 15:14:36,134] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 7376)
+DEBUG [2021-11-25 15:14:52,209] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 12376)
+DEBUG [2021-11-25 15:15:00,859] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 13040)
+DEBUG [2021-11-25 15:18:36,703] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 13040)
+DEBUG [2021-11-25 15:20:24,029] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 1840)
+DEBUG [2021-11-25 15:21:31,582] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 16756)
+DEBUG [2021-11-25 15:22:26,717] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 1128)
+DEBUG [2021-11-25 15:23:18,772] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 16932)
+DEBUG [2021-11-25 15:26:38,892] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 5624)
+DEBUG [2021-11-25 15:27:13,793] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (8784 17992)
+INFO [2021-11-25 18:39:49,805] [autoreload] > Watching for file changes with StatReloader (23860 25044)
+DEBUG [2021-11-25 18:40:41,201] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (23860 8920)
+INFO [2021-11-25 18:42:31,955] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (23860 25044)
+INFO [2021-11-25 18:42:32,984] [autoreload] > Watching for file changes with StatReloader (25200 23756)
+INFO [2021-11-25 18:45:59,904] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (25200 23756)
+INFO [2021-11-25 18:46:00,580] [autoreload] > Watching for file changes with StatReloader (19812 24760)
+INFO [2021-11-25 18:46:46,896] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (19812 24760)
+INFO [2021-11-25 18:46:47,475] [autoreload] > Watching for file changes with StatReloader (9240 24720)
+INFO [2021-11-25 18:46:53,215] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (9240 24720)
+INFO [2021-11-25 18:46:54,210] [autoreload] > Watching for file changes with StatReloader (24016 1652)
+INFO [2021-11-25 18:47:00,259] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (24016 1652)
+INFO [2021-11-25 18:47:01,020] [autoreload] > Watching for file changes with StatReloader (11644 22508)
+INFO [2021-11-25 18:47:24,589] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (11644 22508)
+INFO [2021-11-25 18:47:25,189] [autoreload] > Watching for file changes with StatReloader (7640 10884)
+INFO [2021-11-25 18:47:27,032] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (7640 10884)
+INFO [2021-11-25 18:47:27,906] [autoreload] > Watching for file changes with StatReloader (19748 4364)
+INFO [2021-11-25 18:47:29,709] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (19748 4364)
+INFO [2021-11-25 18:47:30,707] [autoreload] > Watching for file changes with StatReloader (25400 5708)
+INFO [2021-11-25 18:49:54,379] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (25400 5708)
+INFO [2021-11-25 18:49:55,414] [autoreload] > Watching for file changes with StatReloader (23252 19744)
+INFO [2021-11-25 18:52:17,596] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (23252 19744)
+INFO [2021-11-25 18:52:18,203] [autoreload] > Watching for file changes with StatReloader (22832 25332)
+INFO [2021-11-25 18:52:35,026] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (22832 25332)
+INFO [2021-11-25 18:52:35,731] [autoreload] > Watching for file changes with StatReloader (6520 14644)
+INFO [2021-11-25 18:55:10,935] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (6520 14644)
+INFO [2021-11-25 18:55:11,542] [autoreload] > Watching for file changes with StatReloader (6588 6596)
+INFO [2021-11-25 18:57:01,168] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (6588 6596)
+INFO [2021-11-25 18:57:01,783] [autoreload] > Watching for file changes with StatReloader (23584 23520)
+INFO [2021-11-25 18:59:59,135] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (23584 23520)
+INFO [2021-11-25 18:59:59,743] [autoreload] > Watching for file changes with StatReloader (2128 22548)
+WARNING [2021-11-25 19:00:18,699] [log] > Not Found: /favicon.ico (2128 17992)
+ERROR [2021-11-25 19:00:21,822] [log] > Internal Server Error: /my-accounts/<pk>/ (2128 22404)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '<pk>'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\detail.py", line 106, in get
+    self.object = self.get_object()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got '<pk>'.
+WARNING [2021-11-25 19:00:23,671] [log] > Not Found: /my-accounts/1/ (2128 22404)
+WARNING [2021-11-25 19:00:31,935] [log] > Not Found: /my-accounts/76/ (2128 22404)
+INFO [2021-11-25 19:01:10,212] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (2128 22548)
+INFO [2021-11-25 19:01:10,849] [autoreload] > Watching for file changes with StatReloader (18248 19136)
+WARNING [2021-11-25 19:01:11,894] [log] > Not Found: /my-accounts/76/ (18248 19704)
+WARNING [2021-11-25 19:01:19,970] [log] > Not Found: /my-accounts/81/ (18248 19704)
+DEBUG [2021-11-25 19:01:33,389] [core] > Successfully imported extension module "markdown.extensions.toc". (18248 19704)
+DEBUG [2021-11-25 19:01:33,389] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (18248 19704)
+DEBUG [2021-11-25 19:01:35,080] [core] > Successfully imported extension module "markdown.extensions.toc". (18248 19704)
+DEBUG [2021-11-25 19:01:35,080] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (18248 19704)
+ERROR [2021-11-25 19:01:44,456] [log] > Internal Server Error: /my-accounts/13/ (18248 19704)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_vk_controller/account_detail.html
+INFO [2021-11-25 19:01:49,999] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (18248 19136)
+INFO [2021-11-25 19:01:50,705] [autoreload] > Watching for file changes with StatReloader (9892 21732)
+ERROR [2021-11-25 19:01:51,725] [log] > Internal Server Error: /my-accounts/13/ (9892 17676)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_vk_controller/account_detail.html
+INFO [2021-11-25 19:02:54,432] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (9892 21732)
+INFO [2021-11-25 19:02:55,079] [autoreload] > Watching for file changes with StatReloader (25244 8912)
+INFO [2021-11-25 19:03:34,509] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (25244 8912)
+INFO [2021-11-25 19:03:35,478] [autoreload] > Watching for file changes with StatReloader (14892 25212)
+INFO [2021-11-25 19:04:25,275] [autoreload] > Watching for file changes with StatReloader (1280 4988)
+ERROR [2021-11-25 19:05:11,944] [log] > Internal Server Error: /buttons/ (1280 17872)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py", line 33, in get
+    return render(request, 'vk_controller/ui-features/buttons.html', {'ui_elements_active': 'active',
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 195, in render
+    return template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'my_accs' not found. 'my_accs' is not a valid view function or pattern name.
+ERROR [2021-11-25 19:05:56,534] [log] > Internal Server Error: /my-accounts/13/ (1280 17872)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 195, in render
+    return template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 172, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'my_accs' not found. 'my_accs' is not a valid view function or pattern name.
+WARNING [2021-11-25 19:44:30,134] [log] > Not Found: /my-accounts/81/ (1280 12356)
+INFO [2021-11-25 20:24:33,913] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (1280 4988)
+INFO [2021-11-25 20:24:34,913] [autoreload] > Watching for file changes with StatReloader (13760 13100)
+INFO [2021-11-25 20:24:44,492] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (13760 13100)
+INFO [2021-11-25 20:24:45,137] [autoreload] > Watching for file changes with StatReloader (3388 20472)
+INFO [2021-11-25 20:25:02,885] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (3388 20472)
+INFO [2021-11-25 20:25:03,525] [autoreload] > Watching for file changes with StatReloader (20016 24900)
+INFO [2021-11-25 20:28:34,045] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (20016 24900)
+INFO [2021-11-25 20:28:34,660] [autoreload] > Watching for file changes with StatReloader (8772 11392)
+INFO [2021-11-25 20:30:04,639] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (8772 11392)
+INFO [2021-11-25 20:30:05,252] [autoreload] > Watching for file changes with StatReloader (9460 18476)
+INFO [2021-11-25 20:30:43,105] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (9460 18476)
+INFO [2021-11-25 20:30:43,717] [autoreload] > Watching for file changes with StatReloader (11564 10664)
+INFO [2021-11-25 20:41:34,009] [autoreload] > Watching for file changes with StatReloader (16960 21492)

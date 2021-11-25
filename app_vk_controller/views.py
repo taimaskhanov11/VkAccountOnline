@@ -1,7 +1,4 @@
-import asyncio
-import time
 from pprint import pprint
-from threading import Thread
 
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse, Http404, HttpResponseNotFound
@@ -9,7 +6,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 
 # from app_vk_controller.db_peewee import Account
 # from app_vk_controller.forms import AcceptCodeForm
@@ -22,11 +19,10 @@ from rest_framework.mixins import ListModelMixin, CreateModelMixin
 from app_vk_controller.models import Account, Message
 
 
-
 class HomeView(View):
 
     def get(self, request, *args):
-        return render(request, 'vk_accounts/index.html', {'dashboard_active': 'active',
+        return render(request, 'vk_controller/index.html', {'dashboard_active': 'active',
                                                           'dashboard_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
@@ -34,7 +30,7 @@ class HomeView(View):
 class ButtonsView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/ui-features/buttons.html', {'ui_elements_active': 'active',
+        return render(request, 'vk_controller/ui-features/buttons.html', {'ui_elements_active': 'active',
                                                                         'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
@@ -42,7 +38,7 @@ class ButtonsView(View):
 class DropdownsView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/ui-features/dropdowns.html', {'ui_elements_active': 'active',
+        return render(request, 'vk_controller/ui-features/dropdowns.html', {'ui_elements_active': 'active',
                                                                           'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
@@ -50,7 +46,7 @@ class DropdownsView(View):
 class TypographyView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/ui-features/typography.html', {'ui_elements_active': 'active',
+        return render(request, 'vk_controller/ui-features/typography.html', {'ui_elements_active': 'active',
                                                                            'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
@@ -58,7 +54,7 @@ class TypographyView(View):
 class BasicElementsView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/forms/basic_elements.html', {'form_element_active': 'active',
+        return render(request, 'vk_controller/forms/basic_elements.html', {'form_element_active': 'active',
                                                                          'form_element_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
@@ -66,66 +62,61 @@ class BasicElementsView(View):
 class ChartJsView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/charts/chartjs.html', {'charts_active': 'active',
+        return render(request, 'vk_controller/charts/chartjs.html', {'charts_active': 'active',
                                                                    'charts_show': 'show'})
 
 
 class BasicTableView(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/tables/basic-table.html', {'tables_active': 'active',
+        return render(request, 'vk_controller/tables/basic-table.html', {'tables_active': 'active',
                                                                        'tables_show': 'show'})
 
 
 class Mdi(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/icons/mdi.html', {'icons_active': 'active',
+        return render(request, 'vk_controller/icons/mdi.html', {'icons_active': 'active',
                                                               'icons_show': 'show'})
 
 
 class Error404View(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/samples/error-404.html')
+        return render(request, 'vk_controller/samples/error-404.html')
 
 
 class Error500View(View):
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'vk_accounts/samples/error-500.html')
+        return render(request, 'vk_controller/samples/error-500.html')
 
 
 class DocumentationView(TemplateView):
-    template_name = 'vk_accounts/documentation/documentation.html'
+    template_name = 'vk_controller/documentation/documentation.html'
     # def get(self, request, *args, **kwargs):
     #     return render(request, '')
 
 
-class VkAccLastMessageView(TemplateView):
-    template_name = 'vk_accounts/last_messages.html'
+class LastMessageListView(TemplateView):
+    template_name = 'vk_controller/last_messages.html'
     extra_context = {'vk_accounts_active': 'active',
                      'vk_accounts_show': 'show'}
 
-    def get_context_data(self, **kwargs):
-        context = super(VkAccLastMessageView, self).get_context_data(**kwargs)
 
-        # data = Account.get_data()
-        # context['data'] = data
-        return context
-
-    def post(self, request, *args, **kwargs):
-        print(request.POST)
-        # return HttpResponse(request.GET, request.POST)
-        return {'1': 2}
-
-
-class VkAccMyAccView(TemplateView):  # todo
-    template_name = 'vk_accounts/my_accs.html'
+class MyAccView(TemplateView):  # todo
+    template_name = 'vk_controller/my_accs.html'
     extra_context = {'vk_accounts_active': 'active',
                      'vk_accounts_show': 'show', }
 
 
+class AccountDetailView(DetailView):
+    model = Account
+    context_object_name = 'account'
+    template_name = 'vk_controller/account_detail.html'
+
+
+#old
 def get_custom_data(request):
     if request.method == 'GET':
         data_format = request.GET.get('format')
