@@ -1,0 +1,27 @@
+
+.account-img {
+    width: 25%;
+    border-radius: 50%;
+    border: 1px #cfc solid;
+    box-shadow: 0 0 10px #444;
+}
+
+.user-img {
+    border-radius: 50%;
+    border: 1px #cfc solid;
+    box-shadow: 0 0 10px #444;
+}
+
+#user-button {
+    width: 30%;
+    height: 10%;
+    background-size: contain ;
+    background-repeat: no-repeat;
+    padding-right: 0.6em;
+    /*display:block;*/
+    display: inline-block;
+    background-image: url('https://sun9-40.userapi.com/impg/c855024/v855024934/1934e2/Kg5EaCDamRw.jpg?size=599x600&quality=96&sign=0ab42417ad87f778c55e435caa339695&type=album');
+    border-radius: 10%;
+    border: 1px #000000 solid;
+    box-shadow: 0 0 5px #444;
+}

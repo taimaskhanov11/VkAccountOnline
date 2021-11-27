@@ -1,16 +1,8 @@
 let isPaused = true;
 
 const $message = $('#message-data');
-// const $loadingButton = $('#loading-status')
+
 const $loadingButton = $('#my_form')
-
-// $account.onload = doStuff;
-// $account.ready(function () {
-//     doStuff();
-// });
-
-// $(window).load(doStuff);
-
 
 const nowMessages = []
 
@@ -26,6 +18,14 @@ function getUser(id) {
     return $.getJSON(`/api/users/${id}/`)
 }
 
+function splitByIndex(value, index) {
+    let stringLength = value.length / index
+    let endSting = '';
+
+
+
+  return value.substring(0, index) + "<br>" + value.substring(index);
+}
 
 function doStuff() {
     // Код для запуска перед паузой
@@ -40,6 +40,7 @@ function doStuff() {
 
             console.log(response)
             let data = response['results']
+            data.reverse()
             // let obj = JSON.parse(response);
             // console.log(data['messages'])
             let result = [];
@@ -54,14 +55,6 @@ function doStuff() {
                     return
                 }
 
-
-                // let user_data = getUser(message['user'])
-                // // user_data = user_data['responseJSON'];
-                // console.log('USER DATA', user_data);
-                // user_data.done(function (user_data) {
-                //     console.log('USER DATA', user_data['responseJSON']);
-                // })
-
                 $.getJSON(`/api/users/${message['user']}/`, function (user_data) {
                     console.log('USER DATA', user_data);
                     nowMessages.push(message['id']);
@@ -70,29 +63,40 @@ function doStuff() {
                     console.log(message, 'message');
 
                     let tr = document.createElement('tr');
+                    // tr.classList.add("my-class");
                     let td1 = document.createElement('td');
+
+
+                    let p1 = document.createElement('p')
+
                     let txt2 = document.createTextNode(message['account']);
-                    td1.appendChild(txt2);
+
+                    p1.appendChild(txt2);
+                    td1.appendChild(p1);
                     tr.appendChild(td1);
-                    // await new Promise(r => setTimeout(r, 1000));
-                    // sleep(2000)
 
                     // user
                     let td2 = document.createElement('td');
                     let txt3 = document.createTextNode(user_data['name']);
+
                     td2.appendChild(txt3);
                     tr.appendChild(td2);
 
-                    // await new Promise(r => setTimeout(r, 1000));
-                    // sleep(2000)
-
-
+                    //text
                     let td3 = document.createElement('td');
-                    let txt4 = document.createTextNode(message['text']);
-                    td3.appendChild(txt4);
+                    let span3 = document.createElement('span')
+                    span3.classList.add('span-text')
+
+                    // let txt4 = document.createTextNode(messageText);
+
+
+                    span3.innerHTML= splitByIndex(message['text'], 40)
+                    // span3.innerHTML= message['text']
+
+                    // span3.appendChild(txt4);
+                    td3.appendChild(span3);
                     tr.appendChild(td3);
-                    // await new Promise(r => setTimeout(r, 1000));
-                    // sleep(2000)
+
 
                     let td4 = document.createElement('td');
                     let txt5 = document.createTextNode(message['answer_question']);
@@ -113,19 +117,17 @@ function doStuff() {
                     lab.appendChild(txt7);
                     td6.appendChild(lab);
                     tr.appendChild(td6);
-                    // await new Promise(r => setTimeout(r, 1000));
 
-                    // setTimeout(() => {  console.log("World!"); }, 2000);
-                    // sleep(2000).then(() => { console.log("мир"); });
-                    // await new Promise(r => setTimeout(r, second));
-                    // setTimeout(() => {$account.append(tr); }, second);
+                    // setTimeout(() => {
+                    //     if (!isPaused) {
+                    //         $message.prepend(tr);
+                    //     }
+                    // }, second);
 
-                    setTimeout(() => {
-                        if (!isPaused) {
-                            $message.prepend(tr);
-                        }
-                    }, second);
                     second += 500;
+
+                    $message.prepend(tr);
+
                     console.log('запись');
                     // $account.append(tr);
 
@@ -139,22 +141,38 @@ function doStuff() {
 }
 
 // <button type="submit" className="btn btn-primary mb-2">Submit</button>
+const $helpMessage = $('#help-message')
+const aMessage = 'Для обновления в реальном времени нажмите Start.'
+const bMessage = 'Автообновление включено. Для остановки нажмите Stop.'
 
 function loadingButton(mini_text = null) {
-    console.log('LOADING Button')
-    let button_text = mini_text
+    console.log('LOADING Button');
+    let button_text = mini_text;
+    let color = (isPaused) ? 'success' : 'danger';
+    let true_sign = (isPaused) ? 'mdi-play' : 'mdi-stop';
+    let helpMessage = (isPaused) ? aMessage : bMessage;
     if (!mini_text) {
         button_text = (isPaused) ? 'Start' : 'Stop';
     }
 
     let loadButton = document.createElement('button');
-    loadButton.classList.add('btn', 'btn-primary', 'mb-2');
+    // loadButton.classList.add('btn', 'btn-primary', 'mb-2');
+    loadButton.classList.add('btn', `btn-outline-${color}`, 'btn-icon-text');
+
+    //sign
+    let i = document.createElement('i');
+    // sign.classList.add('ti-reload', 'btn-icon-prepend')
+    i.classList.add('mdi', true_sign, 'menu-icon');
+
 
     let text = document.createTextNode(button_text);
+    loadButton.appendChild(i);
     loadButton.appendChild(text);
     loadButton.setAttribute('type', 'submit');
     loadButton.setAttribute('id', 'loading-status');
-    $('#loading-status').replaceWith(loadButton)
+    $('#loading-status').replaceWith(loadButton);
+
+    $helpMessage.text(helpMessage)
     return loadButton;
 }
 
@@ -169,12 +187,10 @@ function loadingIcon() {
 }
 
 
-// window.onload(setTimeout(function () {
-//         doStuff()
-//     }, 2000)
-// );
 document.addEventListener('DOMContentLoaded', function () {
     loadingButton()
+    doStuff()
+
 })
 
 let intR;
@@ -184,6 +200,7 @@ function startLoadMessage() {
 
     loadingButton()
     if (!isPaused) {
+        doStuff()
         clearInterval(intR)
         intR = setInterval(function () {
             if (!isPaused) {

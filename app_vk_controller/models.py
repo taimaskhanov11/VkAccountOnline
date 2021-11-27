@@ -91,9 +91,8 @@ class Message(models.Model):
     answer_question = models.TextField('ответ')
     answer_template = models.TextField('шаблон')
 
-
     class Meta:
-        ordering = ['-sent_at']
+        ordering = ['-id']
 
     def __str__(self):
         return self.text

@@ -17,7 +17,7 @@ class AccountViewSet(viewsets.ModelViewSet):
     filterset_fields = '__all__'
 
 
-class MessageViewSet(viewsets.ModelViewSet): #todo
+class MessageViewSet(viewsets.ModelViewSet): #todo убрал all
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter]

@@ -3,21 +3,65 @@
 {% load vk_tags %}
 
 {% block title %}
-    Basic Table
+    {{ account.name }}
 {% endblock %}
+{% block plugin_css_for_this_pages %}
+    <link rel="stylesheet" href="{% static 'custom_css/my_accounts.css/' %}">
 
-
-{% block custom_plugin_css_for_this_page %}
-    {#    <link rel="stylesheet" href="{% static 'custom_css/loading_icons.css' %}">#}
-    {#    <link rel="stylesheet" href="{% static 'custom_css/main.css' %}">#}
 {% endblock %}
-
 
 {% block main_panel %}
-    {% show_last_messages %}
-{% endblock %}
+    <div class="content-wrapper">
+        <div class="row">
+            {% for foo in 3|create_range %}
+                <div class="col-md-4 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Headings</h2>
+                            <img class="img-rounded account-img"
+                                 src="https://sun9-40.userapi.com/impg/c855024/v855024934/1934e2/Kg5EaCDamRw.jpg?size=599x600&quality=96&sign=0ab42417ad87f778c55e435caa339695&type=album"
+                                 alt="">
+                            <h2 class="display-3" style="display: inline-block">h2. Heading</h2>
+                            <br>
+                            <br>
 
-{% block custom_js_for_this_page %}
-    <script src="{% static 'custom_js/my_accounts.js' %}"></script> #todo
-    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+                            <h4 style="display: inline-block;float: left;width:50%" class="display-6">Пользователей</h4>
+                            <h4 style="display: inline-block;float: right;" class="display-6">1</h4>
+
+                            <h4 style="display: inline-block;width:50%" class="display-6">Всего сообщений</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6">2</h4>
+
+                            <h4 style="display: inline-block;width:51%" class="display-6">Получено номеров</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6">3</h4>
+
+                            <h4 style="display: inline-block;width:60%" class="display-6">Статус</h4>
+                            <h4 style="display: inline-block;float: right" class="display-6 badge badge-danger">
+                                blocked</h4>
+
+                            <h5 style="display: inline-block;width:60%;float: left" class="display-7">Последнее
+                                сообщение</h5>
+                            <h6 style="display: inline-block;float: right" class="display-8">12.06.2021 15:00</h6>
+                            <p>&emsp;</p>
+                            {#                            <br>#}
+
+                            {% for foo in 9|create_range %}
+                                <button id="user-button"
+                                        class="btn btn-outline-dark btn-icon-text">
+                                    <p class="text-right">yan</p>
+                                    {#                                                                        <img class="img-rounded user-img" width="50"#}
+                                    {#                                                                             src="https://sun9-40.userapi.com/impg/c855024/v855024934/1934e2/Kg5EaCDamRw.jpg?size=599x600&quality=96&sign=0ab42417ad87f778c55e435caa339695&type=album"#}
+                                    {#                                                                             alt="">#}
+
+                                </button>
+                            {% endfor %}
+                            <p>&emsp;</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

@@ -16,7 +16,8 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     # path('vk-accounts/', views.VkAccLastMessageView.as_view(), name='vk_accounts'),
-    path('my-accounts/', views.MyAccView.as_view(), name='my_accounts'),
+    path('my-accounts/', views.MyAccountsListView.as_view(), name='my_accounts'),
+
     path('my-accounts/<pk>/', views.AccountDetailView.as_view(), name='account_detail'),
 
     path('last_messages/', views.LastMessageListView.as_view(), name='last_messages'),

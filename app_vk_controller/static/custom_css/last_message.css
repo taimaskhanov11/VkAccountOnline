@@ -1,0 +1,12 @@
+.span-text {
+    word-wrap: normal;
+
+    word-break: break-all;
+}
+/*table {*/
+/*    !*table-layout: fixed;*!*/
+/*    width:100%*/
+/*}*/
+/*td {*/
+/*    word-wrap:break-word;*/
+/*}*/

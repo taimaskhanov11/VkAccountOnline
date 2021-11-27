@@ -104,17 +104,18 @@ class LastMessageListView(TemplateView):
                      'vk_accounts_show': 'show'}
 
 
-class MyAccView(TemplateView):  # todo
-    template_name = 'vk_controller/my_accs.html'
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show', }
+class MyAccountsListView(TemplateView):  # todo
+    model = Account
+    template_name = 'vk_controller/my_accounts.html'
+
 
 
 class AccountDetailView(DetailView):
     model = Account
     context_object_name = 'account'
     template_name = 'vk_controller/account_detail.html'
-
+    extra_context = {'vk_accounts_active': 'active',
+                     'vk_accounts_show': 'show', }
 
 #old
 def get_custom_data(request):
