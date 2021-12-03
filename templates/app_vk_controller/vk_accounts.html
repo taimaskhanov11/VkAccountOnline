@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ account.name }}
+{% endblock %}
+{% block plugin_css_for_this_pages %}
+    <link rel="stylesheet" href="{% static 'custom_css/my_accounts.css/' %}">
+
+{% endblock %}
+
+{% block main_panel %}
+    <div class="content-wrapper">
+        <div class="row">
+            {% for account in account_list %}
+                <div class="col-md-4 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <h2 class="card-title">
+
+                                    <a href="https://vk.com/id{{ account.user_id }}">
+                                        <img style="width:1.1em" src="{% static 'custom_images/vk.jpeg' %}" alt="">
+                                    </a>
+                                </h2>
+                            </div>
+
+                            <div style="display: block">
+                                <a href="{{ account.get_absolute_url }}">
+                                    <img class="img-rounded account-img" src="{{ account.photo_url }}" alt="">
+                                    <h2 class="display-5" style="display: inline-block">
+                                        {{ account.first_name }} {{ account.last_name }}
+                                    </h2>
+                                </a>
+
+                            </div>
+
+                            <br>
+
+
+                            <h4 style="display: inline-block;float: left;width:50%" class="display-6">Пользователей</h4>
+                            <h4 style="display: inline-block;float: right;"
+                                class="display-6">{{ account.users.count }}</h4>
+
+                            <h4 style="display: inline-block;width:50%" class="display-6">Всего сообщений</h4>
+                            <h4 style="display: inline-block;float: right"
+                                class="display-6">{{ account.messages.count }}</h4>
+
+                            <h4 style="display: inline-block;width:51%" class="display-6">Получено номеров</h4>
+                            <h4 style="display: inline-block;float: right"
+                                class="display-6">{{ account.numbers.count }}</h4>
+
+                            <h4 style="display: inline-block;width:60%" class="display-6">Статус</h4>
+
+                            <!-- Статус аккаунта -->
+                            {% get_status account as status %}
+                            <h4 style="display: inline-block;float: right" class="display-6 badge badge-{{ status.0 }}">
+                                {{ status.1 }}</h4>
+
+
+                            <h5 style="display: inline-block;width:60%;float: left" class="display-7">Последнее
+                                сообщение</h5>
+                            <h5 style="display: inline-block;float: right;font-size: 0.7em;"
+                                class="display-7">{{ account.messages.last.sent_at }}</h5>
+                            <p>&emsp;</p>
+                            {#                            <br>#}
+
+                            {% for user in account.users.all %}
+                                <a href="{{ user.get_absolute_url }}">
+                                <button id="user-button"
+                                        style=" background-image: url({{ user.photo_url }})"
+                                        class="btn btn-outline-dark btn-icon-text">
+                                    <p style="font-size: 0.8em;" class="text-right">
+                                        {{ user.first_name }}
+                                    </p>
+                                    {#                                    <img class="img-rounded user-img" width="50"#}
+                                    {#                                         src="https://sun9-40.userapi.com/impg/c855024/v855024934/1934e2/Kg5EaCDamRw.jpg?size=599x600&quality=96&sign=0ab42417ad87f778c55e435caa339695&type=album"#}
+                                    {#                                                                                                                 alt="">#}
+
+                                </button>
+                                </a>
+                            {% endfor %}
+                            <p>&emsp;</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

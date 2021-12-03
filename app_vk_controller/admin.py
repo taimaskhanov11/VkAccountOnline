@@ -4,11 +4,15 @@ from django.contrib import admin
 from app_vk_controller.models import Account, User, Category, Input, Output, Message, Numbers
 
 
+
 class AccountAdmin(admin.ModelAdmin):
     pass
 
+class MessageInline(admin.TabularInline):
+    model = Message
 
 class UserAdmin(admin.ModelAdmin):
+    inlines = (MessageInline, )
     pass
 
 

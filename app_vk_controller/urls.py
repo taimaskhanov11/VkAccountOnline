@@ -15,13 +15,15 @@ urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('api/', include(router.urls)),
 
-    # path('vk-accounts/', views.VkAccLastMessageView.as_view(), name='vk_accounts'),
-    path('my-accounts/', views.MyAccountsListView.as_view(), name='my_accounts'),
+    path('vk-accs/', views.VkAccountListView.as_view(), name='vk_accs'),
+    path('vk-acc/<pk>/', views.VkAccountDetailView.as_view(), name='vk_acc_detail'),
+    path('vk-users/', views.VkUserListView.as_view(), name='vk_users'),
+    path('vk-users/<pk>/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
 
-    path('my-accounts/<pk>/', views.AccountDetailView.as_view(), name='account_detail'),
-
-    path('last_messages/', views.LastMessageListView.as_view(), name='last_messages'),
-
+    # path('messages/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
+    path('messages/', views.MessageListView.as_view(), name='messages'),
+    path('message/<pk>/', views.MessageDetailView.as_view(), name='message_detail'),
+    path('last-messages/', views.LastMessageListView.as_view(), name='last_messages'),
     # path('vk-accounts/last_messages', views.VkAccountsView.as_view(), name='vk_accounts'),
 
     path('buttons/', views.ButtonsView.as_view(), name='buttons'),
@@ -37,7 +39,9 @@ urlpatterns = [
     path('error-500/', views.Error500View.as_view(), name='error_500'),
     path('documentation/', views.DocumentationView.as_view(), name='documentation'),
 
-    path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),
+
+    path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")), #todo
+    path('messages/js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),
 
     path('vk-accounts/data/', views.get_custom_data, name='custom_data')  # todo убрать начало
 ]

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ account.first_name }}
+{% endblock %}
+
+
+{% block custom_plugin_css_for_this_page %}
+    {#    <link rel="stylesheet" href="{% static 'custom_css/loading_icons.css' %}">#}
+    {#    <link rel="stylesheet" href="{% static 'custom_css/main.css' %}">#}
+{% endblock %}
+
+
+{% block main_panel %}
+    <div class="content-wrapper">
+        <div class="d-flex" style="margin-left: 35%; margin-right: auto; width:60%">
+            <div class="col-md-6 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <p class="text-info mb-1">{{ account.first_name }} {{ account.last_name }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="icon-data-list">
+                            <li>
+                                <div class="d-flex">
+                                    <img src="/static/images/faces/face2.jpg" alt="user">
+                                    <div>
+                                        <p class="text-info mb-1">Дата регистрации</p>
+                                        <p class="mb-0">{{ account.created_at }}</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="/static/images/faces/face3.jpg" alt="user">
+                                    <div>
+                                        <p class="text-info mb-1">Leonard Thornton</p>
+                                        <p class="mb-0">Sales dashboard have been created</p>
+                                        <small>11:30 am</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="/static/images/faces/face4.jpg" alt="user">
+                                    <div>
+                                        <p class="text-info mb-1">George Morrison</p>
+                                        <p class="mb-0">Sales dashboard have been created</p>
+                                        <small>8:50 am</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex">
+                                    <img src="/static/images/faces/face5.jpg" alt="user">
+                                    <div>
+                                        <p class="text-info mb-1">Ryan Cortez</p>
+                                        <p class="mb-0">Herbs are fun and easy to grow.</p>
+                                        <small>9:00 am</small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        {{ account.first_name }}
+                        {{ account.last_name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block custom_js_for_this_page %}
+    <script src="{% static 'custom_js/vk_account_detail.js' %}"></script> #todo
+    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+{% endblock %}

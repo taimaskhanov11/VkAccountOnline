@@ -19,13 +19,88 @@ function getUser(id) {
 }
 
 function splitByIndex(value, index) {
-    let stringLength = value.length / index
+    let length = value.length
+    // let stringLength = length / index
+    console.log(length)
     let endSting = '';
+    for (var i = 0; i < length; i += index) {
+        console.log(i)
+        // let preEnd = index + i
+        // if (preEnd < length) {
+        //     endSting += value.substring(i, index + i) + '<br>'
+        // } else {
+        //     endSting += value.substring(i, index + i)
+        //
+        // }
+        endSting += value.substring(i, index + i) + '<br>'
 
-
-
-  return value.substring(0, index) + "<br>" + value.substring(index);
+    }
+    return endSting
 }
+
+
+function createMessageElement(message, user_data) {
+    let tr = document.createElement('tr');
+    // tr.classList.add("my-class");
+    let td1 = document.createElement('td');
+    let p1 = document.createElement('p')
+    let txt2 = document.createTextNode(message['account']);
+
+    p1.appendChild(txt2);
+    td1.appendChild(p1);
+    tr.appendChild(td1);
+
+    // user
+    let td2 = document.createElement('td');
+    let txt3 = document.createTextNode(user_data['name']);
+
+    td2.appendChild(txt3);
+    tr.appendChild(td2);
+
+    //text
+    let td3 = document.createElement('td');
+    let span3 = document.createElement('span');
+    span3.classList.add('span-text');
+
+    // let txt4 = document.createTextNode(messageText);
+
+
+    span3.innerHTML = splitByIndex(message['text'], 40);
+    // span3.innerHTML= message['text']
+
+    // span3.appendChild(txt4);
+    td3.appendChild(span3);
+    tr.appendChild(td3);
+
+
+    let td4 = document.createElement('td');
+    let txt5 = document.createTextNode(message['answer_question']);
+    td4.appendChild(txt5);
+    tr.appendChild(td4);
+    // await new Promise(r => setTimeout(r, 1000));
+
+    let td5 = document.createElement('td');
+    let txt6 = document.createTextNode(message['answer_template']);
+    td5.appendChild(txt6);
+    tr.appendChild(td5);
+    // await new Promise(r => setTimeout(r, 1000));
+
+    let td6 = document.createElement('td');
+    let lab = document.createElement('label');
+    lab.classList.add('badge', 'badge-danger')
+    let txt7 = document.createTextNode('Pending');
+    lab.appendChild(txt7);
+    td6.appendChild(lab);
+    tr.appendChild(td6);
+
+    // setTimeout(() => {
+    //     if (!isPaused) {
+    //         $message.prepend(tr);
+    //     }
+    // }, second);
+    return tr
+}
+
 
 function doStuff() {
     // Код для запуска перед паузой
@@ -37,16 +112,10 @@ function doStuff() {
         dataType: 'json',
 
         success: function (response) {
-
             console.log(response)
             let data = response['results']
             data.reverse()
-            // let obj = JSON.parse(response);
-            // console.log(data['messages'])
             let result = [];
-            // let $account = document.getElementById('account-data')
-            // $message.empty()
-            // sleep(2000)
             let second = 0;
             // for (let account in data) {
             data.forEach(function (message) {
@@ -59,91 +128,22 @@ function doStuff() {
                     console.log('USER DATA', user_data);
                     nowMessages.push(message['id']);
                     // getAccount(message);
-
                     console.log(message, 'message');
-
-                    let tr = document.createElement('tr');
-                    // tr.classList.add("my-class");
-                    let td1 = document.createElement('td');
-
-
-                    let p1 = document.createElement('p')
-
-                    let txt2 = document.createTextNode(message['account']);
-
-                    p1.appendChild(txt2);
-                    td1.appendChild(p1);
-                    tr.appendChild(td1);
-
-                    // user
-                    let td2 = document.createElement('td');
-                    let txt3 = document.createTextNode(user_data['name']);
-
-                    td2.appendChild(txt3);
-                    tr.appendChild(td2);
-
-                    //text
-                    let td3 = document.createElement('td');
-                    let span3 = document.createElement('span')
-                    span3.classList.add('span-text')
-
-                    // let txt4 = document.createTextNode(messageText);
-
-
-                    span3.innerHTML= splitByIndex(message['text'], 40)
-                    // span3.innerHTML= message['text']
-
-                    // span3.appendChild(txt4);
-                    td3.appendChild(span3);
-                    tr.appendChild(td3);
-
-
-                    let td4 = document.createElement('td');
-                    let txt5 = document.createTextNode(message['answer_question']);
-                    td4.appendChild(txt5);
-                    tr.appendChild(td4);
-                    // await new Promise(r => setTimeout(r, 1000));
-
-                    let td5 = document.createElement('td');
-                    let txt6 = document.createTextNode(message['answer_template']);
-                    td5.appendChild(txt6);
-                    tr.appendChild(td5);
-                    // await new Promise(r => setTimeout(r, 1000));
-
-                    let td6 = document.createElement('td');
-                    let lab = document.createElement('label');
-                    lab.classList.add('badge', 'badge-danger')
-                    let txt7 = document.createTextNode('Pending');
-                    lab.appendChild(txt7);
-                    td6.appendChild(lab);
-                    tr.appendChild(td6);
-
-                    // setTimeout(() => {
-                    //     if (!isPaused) {
-                    //         $message.prepend(tr);
-                    //     }
-                    // }, second);
-
+                    let tr = createMessageElement(message, user_data);
                     second += 500;
-
                     $message.prepend(tr);
-
                     console.log('запись');
                     // $account.append(tr);
-
                 })
-
-
             })
-
         },
     })
 }
 
 // <button type="submit" className="btn btn-primary mb-2">Submit</button>
-const $helpMessage = $('#help-message')
-const aMessage = 'Для обновления в реальном времени нажмите Start.'
-const bMessage = 'Автообновление включено. Для остановки нажмите Stop.'
+const $helpMessage = $('#help-message');
+const aMessage = 'Для обновления в реальном времени нажмите Start.';
+const bMessage = 'Автообновление включено. Для остановки нажмите Stop.';
 
 function loadingButton(mini_text = null) {
     console.log('LOADING Button');
@@ -172,15 +172,15 @@ function loadingButton(mini_text = null) {
     loadButton.setAttribute('id', 'loading-status');
     $('#loading-status').replaceWith(loadButton);
 
-    $helpMessage.text(helpMessage)
+    $helpMessage.text(helpMessage);
     return loadButton;
 }
 
 function loadingIcon() {
     // let data = '<object type="text/html" data="../../../templates/_inc/_loading_icons/_style1.html" ></object>'
 
-    $loadingButton.load("/static/custom_html/_style1.html")
-    console.log('LOADING Icon')
+    $loadingButton.load("/static/custom_html/_style1.html");
+    console.log('LOADING Icon');
     // document.getElementById("loading-status").innerHTML=data;
     // document.getElementById("content").innerHTML =
     //     '<object type="text/html" data="../../../templates/_inc/_loading_icons/_style1.html" ></object>';
@@ -188,35 +188,35 @@ function loadingIcon() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadingButton()
-    doStuff()
+    loadingButton();
+    doStuff();
 
 })
 
 let intR;
 
 function startLoadMessage() {
-    let my_interval = 6000
+    let my_interval = 6000;
 
-    loadingButton()
+    loadingButton();
     if (!isPaused) {
-        doStuff()
-        clearInterval(intR)
+        doStuff();
+        clearInterval(intR);
         intR = setInterval(function () {
             if (!isPaused) {
-                doStuff()
+                doStuff();
             } else {
-                console.log('уничтожение')
-                clearInterval(intR)
+                console.log('уничтожение');
+                clearInterval(intR);
             }
-        }, my_interval)
+        }, my_interval);
     }
 }
 
 $loadingButton.click(
     function () {
         isPaused = !isPaused;
-        loadingIcon()
+        loadingIcon();
         // return //todo
         setTimeout(startLoadMessage, 1000);
 

@@ -21226,3 +21226,1033 @@ DEBUG [2021-11-26 16:03:34,427] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1
 DEBUG [2021-11-26 16:04:26,030] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (6776 16192)
 DEBUG [2021-11-26 16:05:07,735] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (6776 7688)
 DEBUG [2021-11-26 16:05:17,535] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (6776 11880)
+INFO [2021-11-27 19:19:01,151] [autoreload] > Watching for file changes with StatReloader (27108 24436)
+WARNING [2021-11-27 19:19:15,386] [log] > Not Found: /favicon.ico (27108 27284)
+DEBUG [2021-11-27 19:38:48,304] [core] > Successfully imported extension module "markdown.extensions.toc". (27108 15596)
+DEBUG [2021-11-27 19:38:48,304] [core] > Successfully loaded extension "markdown.extensions.toc.TocExtension". (27108 15596)
+WARNING [2021-11-27 19:38:48,460] [log] > Not Found: /api/accounts/13/ (27108 15596)
+INFO [2021-11-27 23:37:56,820] [autoreload] > Watching for file changes with StatReloader (1112 16736)
+INFO [2021-11-28 02:50:54,859] [autoreload] > Watching for file changes with StatReloader (19684 23624)
+INFO [2021-11-28 12:27:15,934] [autoreload] > Watching for file changes with StatReloader (18604 15028)
+WARNING [2021-11-28 13:38:31,046] [log] > Not Found: /favicon.ico (18604 19864)
+WARNING [2021-11-28 13:38:33,873] [log] > Not Found: /my-accounts/13/ (18604 19864)
+INFO [2021-11-28 17:33:02,528] [autoreload] > Watching for file changes with StatReloader (22076 23192)
+INFO [2021-11-30 14:30:26,799] [autoreload] > Watching for file changes with StatReloader (20600 11916)
+WARNING [2021-11-30 15:20:40,148] [log] > Not Found: /favicon.ico (20600 8248)
+INFO [2021-11-30 18:16:06,434] [autoreload] > Watching for file changes with StatReloader (24032 19196)
+INFO [2021-12-01 15:44:05,275] [autoreload] > Watching for file changes with StatReloader (8236 13792)
+WARNING [2021-12-01 15:44:13,652] [log] > Not Found: /favicon.ico (8236 3048)
+INFO [2021-12-03 09:40:53,505] [autoreload] > Watching for file changes with StatReloader (45176 17988)
+WARNING [2021-12-03 09:40:54,878] [log] > Not Found: /my-accounts/13/ (45176 40888)
+WARNING [2021-12-03 09:40:55,106] [log] > Not Found: /favicon.ico (45176 22748)
+INFO [2021-12-03 09:41:00,834] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (45176 17988)
+INFO [2021-12-03 09:41:03,651] [autoreload] > Watching for file changes with StatReloader (14164 46896)
+DEBUG [2021-12-03 09:42:08,605] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (14164 19180)
+DEBUG [2021-12-03 09:54:18,984] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (14164 12196)
+DEBUG [2021-12-03 09:54:29,347] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (14164 6276)
+INFO [2021-12-03 10:42:20,410] [autoreload] > Watching for file changes with StatReloader (41052 34052)
+DEBUG [2021-12-03 10:42:23,263] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (41052 33736)
+DEBUG [2021-12-03 10:42:43,004] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (41052 14544)
+INFO [2021-12-03 10:43:09,530] [autoreload] > Watching for file changes with StatReloader (46488 30432)
+DEBUG [2021-12-03 10:43:11,247] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (46488 22536)
+DEBUG [2021-12-03 10:43:52,296] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (46488 12364)
+INFO [2021-12-03 10:55:55,283] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (46488 30432)
+INFO [2021-12-03 10:55:56,098] [autoreload] > Watching for file changes with StatReloader (48604 45984)
+INFO [2021-12-03 10:57:12,494] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (48604 45984)
+INFO [2021-12-03 10:57:13,374] [autoreload] > Watching for file changes with StatReloader (8084 15748)
+INFO [2021-12-03 10:57:39,258] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (8084 15748)
+INFO [2021-12-03 10:57:40,407] [autoreload] > Watching for file changes with StatReloader (20484 10556)
+INFO [2021-12-03 11:03:54,766] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\settings.py changed, reloading. (20484 10556)
+INFO [2021-12-03 11:03:55,941] [autoreload] > Watching for file changes with StatReloader (28864 3188)
+INFO [2021-12-03 11:04:22,127] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\settings.py changed, reloading. (28864 3188)
+INFO [2021-12-03 11:04:26,352] [autoreload] > Watching for file changes with StatReloader (10892 6160)
+INFO [2021-12-03 11:13:28,302] [autoreload] > Watching for file changes with StatReloader (3748 19360)
+ERROR [2021-12-03 11:13:41,244] [log] > Internal Server Error: /admin/app_vk_controller/user/ (3748 19576)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ОШИБКА:  столбец app_vk_controller_user.photo_url не существует
+LINE 1: ..."account_id", "app_vk_controller_user"."user_id", "app_vk_co...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1815, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 205, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 140, in _record
+    return method(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ОШИБКА:  столбец app_vk_controller_user.photo_url не существует
+LINE 1: ..."account_id", "app_vk_controller_user"."user_id", "app_vk_co...
+                                                             ^
+
+ERROR [2021-12-03 11:13:44,250] [log] > Internal Server Error: /admin/app_vk_controller/account/ (3748 19576)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1815, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 205, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 140, in _record
+    return method(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+INFO [2021-12-03 11:17:15,396] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (3748 19360)
+INFO [2021-12-03 11:17:16,149] [autoreload] > Watching for file changes with StatReloader (7148 15956)
+INFO [2021-12-03 11:17:43,696] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (7148 15956)
+INFO [2021-12-03 11:17:44,476] [autoreload] > Watching for file changes with StatReloader (17136 52336)
+ERROR [2021-12-03 11:18:45,343] [log] > Internal Server Error: /admin/app_vk_controller/account/ (17136 43412)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1815, in changelist_view
+    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 205, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 140, in _record
+    return method(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+ERROR [2021-12-03 11:21:21,091] [log] > Internal Server Error: /admin/app_vk_controller/account/ (17136 43412)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1723, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1408, in response_action
+    response = func(self, request, queryset)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\actions.py", line 33, in delete_selected
+    deletable_objects, model_count, perms_needed, protected = modeladmin.get_deleted_objects(queryset, request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\options.py", line 1846, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\contrib\admin\utils.py", line 113, in get_deleted_objects
+    obj = objs[0]
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 317, in __getitem__
+    qs._fetch_all()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 205, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 140, in _record
+    return method(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ОШИБКА:  столбец app_vk_controller_account.photo_url не существует
+LINE 1: ...t"."name", "app_vk_controller_account"."user_id", "app_vk_co...
+                                                             ^
+
+INFO [2021-12-03 11:38:21,172] [autoreload] > Watching for file changes with StatReloader (35240 37620)
+INFO [2021-12-03 11:56:47,782] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (35240 37620)
+INFO [2021-12-03 11:56:48,910] [autoreload] > Watching for file changes with StatReloader (12076 28944)
+INFO [2021-12-03 11:57:28,993] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (12076 28944)
+INFO [2021-12-03 11:57:29,953] [autoreload] > Watching for file changes with StatReloader (10460 1272)
+INFO [2021-12-03 12:00:05,561] [autoreload] > Watching for file changes with StatReloader (37260 32212)
+INFO [2021-12-03 12:09:42,148] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (37260 32212)
+INFO [2021-12-03 12:09:43,371] [autoreload] > Watching for file changes with StatReloader (45480 42320)
+INFO [2021-12-03 12:15:58,024] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (45480 42320)
+INFO [2021-12-03 12:15:58,865] [autoreload] > Watching for file changes with StatReloader (13060 6140)
+INFO [2021-12-03 12:16:06,103] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (13060 6140)
+INFO [2021-12-03 12:16:07,073] [autoreload] > Watching for file changes with StatReloader (8588 25052)
+INFO [2021-12-03 12:16:39,914] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (8588 25052)
+INFO [2021-12-03 12:16:40,824] [autoreload] > Watching for file changes with StatReloader (29004 51648)
+INFO [2021-12-03 12:16:59,928] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (29004 51648)
+INFO [2021-12-03 12:17:00,878] [autoreload] > Watching for file changes with StatReloader (44972 17036)
+INFO [2021-12-03 12:17:10,273] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (44972 17036)
+INFO [2021-12-03 12:17:11,298] [autoreload] > Watching for file changes with StatReloader (18664 18676)
+INFO [2021-12-03 12:17:18,527] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (18664 18676)
+INFO [2021-12-03 12:17:19,372] [autoreload] > Watching for file changes with StatReloader (11556 38000)
+INFO [2021-12-03 12:21:38,021] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (11556 38000)
+INFO [2021-12-03 12:21:38,913] [autoreload] > Watching for file changes with StatReloader (33888 2288)
+ERROR [2021-12-03 12:23:28,774] [log] > Internal Server Error: /my-accounts/ (33888 10340)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\library.py", line 119, in compile_func
+    args, kwargs = parse_bits(
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\library.py", line 306, in parse_bits
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'account_status' did not receive value(s) for the argument(s): 'account'
+ERROR [2021-12-03 12:23:41,360] [log] > Internal Server Error: /my-accounts/ (33888 10340)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ОШИБКА:  столбец app_vk_controller_numbers.account_id не существует
+LINE 1: ... "__count" FROM "app_vk_controller_numbers" WHERE "app_vk_co...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 519, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\query.py", line 504, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 205, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 140, in _record
+    return method(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ОШИБКА:  столбец app_vk_controller_numbers.account_id не существует
+LINE 1: ... "__count" FROM "app_vk_controller_numbers" WHERE "app_vk_co...
+                                                             ^
+
+INFO [2021-12-03 12:29:41,742] [autoreload] > Watching for file changes with StatReloader (53544 32900)
+INFO [2021-12-03 12:44:41,385] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\settings.py changed, reloading. (53544 32900)
+INFO [2021-12-03 12:44:42,746] [autoreload] > Watching for file changes with StatReloader (49512 14008)
+INFO [2021-12-03 12:45:29,589] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\settings.py changed, reloading. (49512 14008)
+INFO [2021-12-03 12:45:30,522] [autoreload] > Watching for file changes with StatReloader (324 10676)
+INFO [2021-12-03 12:46:16,971] [autoreload] > Watching for file changes with StatReloader (23732 43020)
+DEBUG [2021-12-03 12:46:51,892] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (23732 10744)
+ERROR [2021-12-03 12:48:59,037] [log] > Internal Server Error: /my-accounts/ (23732 31876)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 167, in render
+    values = list(values)
+TypeError: 'RelatedManager' object is not iterable
+INFO [2021-12-03 12:59:31,164] [autoreload] > Watching for file changes with StatReloader (39060 42848)
+WARNING [2021-12-03 12:59:32,187] [log] > Forbidden (CSRF token missing or incorrect.): /admin/app_vk_controller/account/ (39060 42076)
+INFO [2021-12-03 13:12:36,893] [autoreload] > Watching for file changes with StatReloader (30668 3632)
+INFO [2021-12-03 13:13:56,582] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\urls.py changed, reloading. (30668 3632)
+INFO [2021-12-03 13:13:57,844] [autoreload] > Watching for file changes with StatReloader (3744 10676)
+INFO [2021-12-03 13:14:10,455] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\urls.py changed, reloading. (3744 10676)
+INFO [2021-12-03 13:14:11,529] [autoreload] > Watching for file changes with StatReloader (19144 16160)
+INFO [2021-12-03 13:15:48,100] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (19144 16160)
+INFO [2021-12-03 13:15:49,180] [autoreload] > Watching for file changes with StatReloader (30460 51704)
+INFO [2021-12-03 13:17:50,452] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\VkAccountOnline\urls.py changed, reloading. (30460 51704)
+INFO [2021-12-03 13:17:51,711] [autoreload] > Watching for file changes with StatReloader (4680 47760)
+INFO [2021-12-03 13:20:58,986] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (4680 47760)
+INFO [2021-12-03 13:21:00,116] [autoreload] > Watching for file changes with StatReloader (19860 5832)
+INFO [2021-12-03 13:21:52,826] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (19860 5832)
+INFO [2021-12-03 13:21:53,822] [autoreload] > Watching for file changes with StatReloader (15116 41704)
+INFO [2021-12-03 13:25:08,067] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (15116 41704)
+INFO [2021-12-03 13:25:09,283] [autoreload] > Watching for file changes with StatReloader (53268 53088)
+INFO [2021-12-03 13:26:23,315] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (53268 53088)
+INFO [2021-12-03 13:26:24,421] [autoreload] > Watching for file changes with StatReloader (22308 16752)
+INFO [2021-12-03 13:26:55,974] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (22308 16752)
+INFO [2021-12-03 13:26:56,995] [autoreload] > Watching for file changes with StatReloader (4072 12524)
+INFO [2021-12-03 13:30:55,520] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (4072 12524)
+INFO [2021-12-03 13:30:56,351] [autoreload] > Watching for file changes with StatReloader (46796 43636)
+INFO [2021-12-03 13:32:42,115] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (46796 43636)
+INFO [2021-12-03 13:32:43,103] [autoreload] > Watching for file changes with StatReloader (51952 1032)
+WARNING [2021-12-03 13:33:42,884] [log] > Not Found: /my-accounts/ (51952 5900)
+WARNING [2021-12-03 13:34:34,266] [log] > Not Found: /my-accounts/ (51952 5900)
+INFO [2021-12-03 13:46:46,318] [autoreload] > Watching for file changes with StatReloader (17068 6836)
+INFO [2021-12-03 13:51:11,587] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (17068 6836)
+INFO [2021-12-03 13:51:12,584] [autoreload] > Watching for file changes with StatReloader (48540 49068)
+INFO [2021-12-03 14:21:16,058] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (48540 49068)
+INFO [2021-12-03 14:21:17,705] [autoreload] > Watching for file changes with StatReloader (10032 45940)
+DEBUG [2021-12-03 14:31:11,860] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (10032 22344)
+INFO [2021-12-03 14:57:45,070] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (10032 45940)
+INFO [2021-12-03 14:57:46,395] [autoreload] > Watching for file changes with StatReloader (29212 51512)
+INFO [2021-12-03 15:01:36,402] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (29212 51512)
+INFO [2021-12-03 15:01:37,484] [autoreload] > Watching for file changes with StatReloader (45248 47064)
+INFO [2021-12-03 15:02:31,828] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (45248 47064)
+INFO [2021-12-03 15:02:32,817] [autoreload] > Watching for file changes with StatReloader (3036 30228)
+ERROR [2021-12-03 15:21:25,523] [log] > Internal Server Error: /vk-users/1/ (3036 50196)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 766, in __init__
+    self.literal = float(var)
+ValueError: could not convert string to float: 'account._meta.local_fields'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 782, in __init__
+    self.literal = mark_safe(unescape_string_literal(var))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\functional.py", line 228, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\utils\text.py", line 392, in unescape_string_literal
+    raise ValueError("Not a string literal: %r" % s)
+ValueError: Not a string literal: 'account._meta.local_fields'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 813, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 648, in __init__
+    var_obj = Variable(var)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 787, in __init__
+    raise TemplateSyntaxError("Variables and attributes may "
+django.template.exceptions.TemplateSyntaxError: Variables and attributes may not begin with underscores: 'account._meta.local_fields'
+INFO [2021-12-03 15:24:02,499] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (3036 30228)
+INFO [2021-12-03 15:24:03,320] [autoreload] > Watching for file changes with StatReloader (48980 29060)
+ERROR [2021-12-03 15:24:07,724] [log] > Internal Server Error: /vk-users/1/ (48980 9976)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 200, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 6. 
+INFO [2021-12-03 15:32:56,514] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (48980 29060)
+INFO [2021-12-03 15:32:58,323] [autoreload] > Watching for file changes with StatReloader (40516 34560)
+ERROR [2021-12-03 15:32:59,773] [log] > Internal Server Error: /vk-users/1/ (40516 45528)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py", line 33, in get_status
+    if isinstance(Account, obj):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+INFO [2021-12-03 15:33:19,625] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (40516 34560)
+INFO [2021-12-03 15:33:20,650] [autoreload] > Watching for file changes with StatReloader (51216 22808)
+ERROR [2021-12-03 15:33:27,100] [log] > Internal Server Error: /vk-users/1/ (51216 22992)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py", line 34, in get_status
+    if isinstance(Account, obj):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+INFO [2021-12-03 15:34:31,233] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (51216 22808)
+INFO [2021-12-03 15:34:32,290] [autoreload] > Watching for file changes with StatReloader (22088 37696)
+INFO [2021-12-03 15:35:58,192] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\admin.py changed, reloading. (22088 37696)
+INFO [2021-12-03 15:35:59,806] [autoreload] > Watching for file changes with StatReloader (51912 38696)
+INFO [2021-12-03 15:36:29,775] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\admin.py changed, reloading. (51912 38696)
+INFO [2021-12-03 15:36:30,685] [autoreload] > Watching for file changes with StatReloader (48680 25580)
+INFO [2021-12-03 15:36:47,383] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\admin.py changed, reloading. (48680 25580)
+INFO [2021-12-03 15:36:48,489] [autoreload] > Watching for file changes with StatReloader (44480 24012)
+INFO [2021-12-03 15:37:53,110] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\admin.py changed, reloading. (44480 24012)
+INFO [2021-12-03 15:37:54,062] [autoreload] > Watching for file changes with StatReloader (11892 18644)
+INFO [2021-12-03 15:38:12,087] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\admin.py changed, reloading. (11892 18644)
+INFO [2021-12-03 15:38:13,080] [autoreload] > Watching for file changes with StatReloader (28940 22400)
+INFO [2021-12-03 15:51:58,779] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (28940 22400)
+INFO [2021-12-03 15:52:00,195] [autoreload] > Watching for file changes with StatReloader (34584 18144)
+INFO [2021-12-03 15:52:06,576] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (34584 18144)
+INFO [2021-12-03 15:52:07,446] [autoreload] > Watching for file changes with StatReloader (31864 18800)
+INFO [2021-12-03 15:52:15,681] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (31864 18800)
+INFO [2021-12-03 15:52:16,543] [autoreload] > Watching for file changes with StatReloader (49948 3376)
+INFO [2021-12-03 15:52:21,615] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (49948 3376)
+INFO [2021-12-03 15:52:22,419] [autoreload] > Watching for file changes with StatReloader (15956 49760)
+INFO [2021-12-03 15:53:00,475] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (15956 49760)
+INFO [2021-12-03 15:53:01,406] [autoreload] > Watching for file changes with StatReloader (30248 38248)
+INFO [2021-12-03 15:54:02,911] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (30248 38248)
+INFO [2021-12-03 15:54:03,712] [autoreload] > Watching for file changes with StatReloader (32828 11748)
+INFO [2021-12-03 15:54:07,935] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (32828 11748)
+INFO [2021-12-03 15:54:09,018] [autoreload] > Watching for file changes with StatReloader (52876 37004)
+INFO [2021-12-03 15:56:48,472] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (52876 37004)
+INFO [2021-12-03 15:56:49,318] [autoreload] > Watching for file changes with StatReloader (24480 12064)
+INFO [2021-12-03 15:59:46,954] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (24480 12064)
+INFO [2021-12-03 15:59:47,788] [autoreload] > Watching for file changes with StatReloader (50024 21924)
+INFO [2021-12-03 16:29:17,845] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (50024 21924)
+INFO [2021-12-03 16:29:18,939] [autoreload] > Watching for file changes with StatReloader (23840 6184)
+ERROR [2021-12-03 16:40:16,383] [log] > Internal Server Error: /vk-users/1/ (23840 40596)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\defaulttags.py", line 979, in do_if
+    nodelist = parser.parse(('endif',))
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 658, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 717, in args_check
+    raise TemplateSyntaxError("%s requires %d arguments, %d provided" %
+django.template.exceptions.TemplateSyntaxError: truncatewords requires 2 arguments, 1 provided
+INFO [2021-12-03 16:46:26,114] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\models.py changed, reloading. (23840 6184)
+INFO [2021-12-03 16:46:27,812] [autoreload] > Watching for file changes with StatReloader (49720 33760)
+INFO [2021-12-03 16:47:09,958] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (49720 33760)
+INFO [2021-12-03 16:47:11,249] [autoreload] > Watching for file changes with StatReloader (4568 25780)
+INFO [2021-12-03 16:51:31,439] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (4568 25780)
+INFO [2021-12-03 16:51:32,441] [autoreload] > Watching for file changes with StatReloader (18140 28092)
+INFO [2021-12-03 16:51:44,186] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (18140 28092)
+INFO [2021-12-03 16:51:44,956] [autoreload] > Watching for file changes with StatReloader (22580 8568)
+ERROR [2021-12-03 17:13:26,754] [log] > Internal Server Error: /message/4/ (22580 39500)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_vk_controller/message_detail.html
+INFO [2021-12-03 19:08:42,009] [autoreload] > Watching for file changes with StatReloader (51480 5792)
+ERROR [2021-12-03 19:11:07,216] [log] > Internal Server Error: /message/37/ (51480 25140)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_vk_controller/message_detail.html
+DEBUG [2021-12-03 19:12:00,224] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (51480 38764)
+INFO [2021-12-03 19:14:08,676] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (51480 5792)
+INFO [2021-12-03 19:14:09,565] [autoreload] > Watching for file changes with StatReloader (14744 33456)
+ERROR [2021-12-03 19:14:22,245] [log] > Internal Server Error: /message/32/ (14744 45364)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: app_vk_controller/message_detail.html
+INFO [2021-12-03 19:14:28,726] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (14744 33456)
+INFO [2021-12-03 19:14:29,515] [autoreload] > Watching for file changes with StatReloader (41760 16240)
+INFO [2021-12-03 19:14:58,101] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (41760 16240)
+INFO [2021-12-03 19:14:58,920] [autoreload] > Watching for file changes with StatReloader (8468 38480)
+INFO [2021-12-03 19:18:22,847] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (8468 38480)
+INFO [2021-12-03 19:18:23,873] [autoreload] > Watching for file changes with StatReloader (35956 43376)
+INFO [2021-12-03 19:18:43,537] [autoreload] > Watching for file changes with StatReloader (53292 28364)
+ERROR [2021-12-03 19:18:45,953] [log] > Internal Server Error: /message/32/ (53292 32912)
+Traceback (most recent call last):
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\test\utils.py", line 100, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\venv3.9\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py", line 51, in get_object_dict
+    for a, b in obj.__dict__:
+ValueError: too many values to unpack (expected 2)
+INFO [2021-12-03 19:18:54,327] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (53292 28364)
+INFO [2021-12-03 19:18:55,343] [autoreload] > Watching for file changes with StatReloader (17476 11636)
+INFO [2021-12-03 19:19:34,131] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\templatetags\vk_tags.py changed, reloading. (17476 11636)
+INFO [2021-12-03 19:19:35,318] [autoreload] > Watching for file changes with StatReloader (52312 39836)
+WARNING [2021-12-03 19:20:37,196] [log] > Not Found: /vendors/ti-icons/css/themify-icons.css (52312 50560)
+WARNING [2021-12-03 19:20:37,251] [log] > Not Found: /vendors/feather/feather.css (52312 48428)
+WARNING [2021-12-03 19:20:37,254] [log] > Not Found: /vendors/css/vendor.bundle.base.css (52312 23940)
+WARNING [2021-12-03 19:20:37,277] [log] > Not Found: /vendors/js/vendor.bundle.base.js (52312 4492)
+WARNING [2021-12-03 19:20:37,333] [log] > Not Found: /css/vertical-layout-light/style.css (52312 38156)
+WARNING [2021-12-03 19:20:37,357] [log] > Not Found: /js/off-canvas.js (52312 8484)
+WARNING [2021-12-03 19:20:37,890] [log] > Not Found: /js/hoverable-collapse.js (52312 50560)
+WARNING [2021-12-03 19:20:37,914] [log] > Not Found: /js/template.js (52312 48428)
+WARNING [2021-12-03 19:20:37,924] [log] > Not Found: /js/settings.js (52312 23940)
+WARNING [2021-12-03 19:20:37,932] [log] > Not Found: /js/todolist.js (52312 4492)
+WARNING [2021-12-03 19:20:38,118] [log] > Not Found: /images/favicon.png (52312 4492)
+WARNING [2021-12-03 19:20:41,545] [log] > Not Found: /js/off-canvas.js (52312 38156)
+WARNING [2021-12-03 19:20:41,584] [log] > Not Found: /css/vertical-layout-light/style.css (52312 50560)
+WARNING [2021-12-03 19:20:41,599] [log] > Not Found: /vendors/feather/feather.css (52312 4492)
+WARNING [2021-12-03 19:20:41,622] [log] > Not Found: /vendors/js/vendor.bundle.base.js (52312 8484)
+WARNING [2021-12-03 19:20:41,638] [log] > Not Found: /vendors/css/vendor.bundle.base.css (52312 48428)
+WARNING [2021-12-03 19:20:41,642] [log] > Not Found: /vendors/ti-icons/css/themify-icons.css (52312 23940)
+WARNING [2021-12-03 19:20:42,525] [log] > Not Found: /js/template.js (52312 50560)
+WARNING [2021-12-03 19:20:42,540] [log] > Not Found: /js/todolist.js (52312 8484)
+WARNING [2021-12-03 19:20:42,560] [log] > Not Found: /js/hoverable-collapse.js (52312 38156)
+WARNING [2021-12-03 19:20:42,562] [log] > Not Found: /js/settings.js (52312 4492)
+WARNING [2021-12-03 19:20:42,564] [log] > Not Found: /js/off-canvas.js (52312 23940)
+DEBUG [2021-12-03 20:30:49,807] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (52312 1032)
+INFO [2021-12-03 20:33:18,109] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (52312 39836)
+INFO [2021-12-03 20:33:19,297] [autoreload] > Watching for file changes with StatReloader (41740 21568)
+INFO [2021-12-03 20:36:38,726] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (41740 21568)
+INFO [2021-12-03 20:36:39,533] [autoreload] > Watching for file changes with StatReloader (6372 29688)
+INFO [2021-12-03 20:38:46,531] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (6372 29688)
+INFO [2021-12-03 20:38:47,426] [autoreload] > Watching for file changes with StatReloader (52340 51328)
+INFO [2021-12-03 20:40:17,097] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (52340 51328)
+INFO [2021-12-03 20:40:18,450] [autoreload] > Watching for file changes with StatReloader (37484 29308)
+INFO [2021-12-03 20:41:39,638] [autoreload] > Watching for file changes with StatReloader (50156 43876)
+INFO [2021-12-03 20:43:20,752] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\views.py changed, reloading. (50156 43876)
+INFO [2021-12-03 20:43:21,929] [autoreload] > Watching for file changes with StatReloader (26476 27664)
+INFO [2021-12-03 20:45:49,519] [autoreload] > Watching for file changes with StatReloader (23884 28348)
+DEBUG [2021-12-03 20:56:46,231] [peewee] > ('SELECT "t1"."id", "t1"."token", "t1"."name", "t1"."user_id", "t1"."blocked", "t1"."created_at", "t1"."start_status" FROM "account" AS "t1"', []) (23884 53132)
+WARNING [2021-12-03 20:59:48,531] [log] > Not Found: /messages/js/data.txt (23884 27408)
+WARNING [2021-12-03 20:59:59,038] [log] > Not Found: /messages/js/data.txt (23884 27408)
+WARNING [2021-12-03 21:00:22,017] [log] > Not Found: /messages/js/data.txt (23884 27408)
+WARNING [2021-12-03 21:00:45,591] [log] > Not Found: /messages/js/data.txt (23884 52744)
+WARNING [2021-12-03 21:00:53,350] [log] > Not Found: /messages/js/data.txt (23884 4816)
+WARNING [2021-12-03 21:00:58,637] [log] > Not Found: /messages/js/data.txt (23884 4816)
+WARNING [2021-12-03 21:01:30,244] [log] > Not Found: /messages/js/data.txt (23884 1428)
+WARNING [2021-12-03 21:05:59,554] [log] > Not Found: /messages/js/data.txt (23884 21724)
+WARNING [2021-12-03 21:06:24,039] [log] > Not Found: /messages/js/data.txt (23884 18088)
+WARNING [2021-12-03 21:06:29,419] [log] > Not Found: /messages/js/data.txt (23884 18088)
+WARNING [2021-12-03 21:07:14,006] [log] > Not Found: /messages/js/data.txt (23884 18088)
+INFO [2021-12-03 21:07:34,386] [autoreload] > C:\Users\taima\PycharmProjects\VkAccountOnline\app_vk_controller\urls.py changed, reloading. (23884 28348)
+INFO [2021-12-03 21:07:35,591] [autoreload] > Watching for file changes with StatReloader (16188 36580)
+WARNING [2021-12-03 21:11:53,724] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:11:54,637] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:12:00,054] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:12:16,623] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:12:18,435] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:12:19,150] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:13:01,512] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:13:03,835] [log] > Not Found: /images/faces/face5.jpg (16188 34900)
+WARNING [2021-12-03 21:14:26,731] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:36,479] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:39,456] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:40,412] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:41,400] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:42,356] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:14:52,075] [log] > Not Found: /images/faces/face5.jpg (16188 11244)
+WARNING [2021-12-03 21:15:57,394] [log] > Not Found: /images/faces/face5.jpg (16188 25984)
+WARNING [2021-12-03 21:17:15,642] [log] > Not Found: /images/faces/face5.jpg (16188 27208)
+WARNING [2021-12-03 21:17:17,124] [log] > Not Found: /images/faces/face5.jpg (16188 27208)
+WARNING [2021-12-03 21:17:18,623] [log] > Not Found: /images/faces/face5.jpg (16188 27208)
+WARNING [2021-12-03 21:17:25,680] [log] > Not Found: /images/faces/face5.jpg (16188 27208)
+WARNING [2021-12-03 21:20:33,707] [log] > Not Found: /images/faces/face5.jpg (16188 27208)
+WARNING [2021-12-03 21:20:36,914] [log] > Not Found: /images/faces/face5.jpg (16188 16788)

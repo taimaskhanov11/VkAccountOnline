@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ user.first_name }}
+{% endblock %}
+
+
+{% block custom_plugin_css_for_this_page %}
+    <link rel="stylesheet" href="{% static 'custom_css/my_accounts.css/' %}">
+
+    {#    <link rel="stylesheet" href="{% static 'custom_css/loading_icons.css' %}">#}
+    {#    <link rel="stylesheet" href="{% static 'custom_css/main.css' %}">#}
+{% endblock %}
+
+
+{% block main_panel %}
+    <div class="content-wrapper">
+
+        <div class="d-flex" style="margin-left: 35%; margin-right: auto; width:60%">
+            <div class="col-md-6 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-info mb-1">{{ user.first_name }} {{ user.last_name }}</p>
+                            <img class="account-img" style="width:3em;float : right" src="{{ user.photo_url }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="icon-data-list">
+                            {% for user_field in user_info %}
+                                <li>
+                                    <div class="d-flex">
+                                        {#                                    <img src="/static/images/faces/face2.jpg" alt="user">#}
+                                        <div>
+                                            <p class="text-dark mb-0">{{ user_field }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="icon-data-list">
+                            {% for key, user_value in user_info.items %}
+                                <li>
+                                    <div class="d-flex">
+                                        {#                                    <img src="/static/images/faces/face2.jpg" alt="user">#}
+                                        <div>
+                                            {% if key == 'Статус блокировки' %}
+                                                {% get_status user as status %}
+                                                <p class="mb-0 display-6 badge badge-{{ status.0 }}">{{ status.1 }}</p>
+
+                                            {% elif key == 'Последнее сообщение' %}
+                                                <p class="text-primary mb-0">
+                                                    <a class="text-info" href="{{ user_value.get_absolute_url }}">
+                                                        {{ user_value|truncatewords:3 }}
+                                                    </a>
+                                                </p>
+
+                                            {% elif key == 'Ссылка в ВКонтакте' %}
+                                                <p class="mb-0">
+                                                    <a class="text-info" href="{{ user_value }}">VK</a>
+                                                </p>
+                                            {% elif key == 'Прикреплен к боту' %}
+                                                <p class="mb-0">
+                                                    <a class="text-info" href="{{ user_value.get_absolute_url }}">
+                                                        {{ user_value.first_name }} {{ user_value.last_name }}
+                                                    </a>
+                                                </p>
+
+
+                                            {% else %}
+                                                <p class="text-dark mb-0">{{ user_value }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Третья -->
+            <div class="col-md-6 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        {{ user.first_name }}
+                        {{ user.last_name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block custom_js_for_this_page %}
+{#    <script src="{% static 'custom_js/vk_account_detail.js' %}"></script> #todo#}
+    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+{% endblock %}
