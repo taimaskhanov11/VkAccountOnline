@@ -7,7 +7,7 @@
 {% endblock %}
 {% block plugin_css_for_this_pages %}
     <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">#}
 {% endblock %}
 
 {% block main_panel %}
@@ -24,168 +24,107 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
+
+                                <!-- Paginator -->
+                                {% include '_inc/_paginator.html' %}
+
+                                <!-- Messages table -->
+
                                 <table id="example" class="display expandable-table dataTable no-footer"
                                        style="width: 100%;" role="grid">
                                     <thead>
                                     <tr role="row">
                                         <th class="select-checkbox sorting_disabled" rowspan="1" colspan="1"
-                                            aria-label="Quote#" style="width: 70px;">Quote#
+                                            aria-label="Quote#" style="width: 70px;">Аккаунт#
                                         </th>
                                         <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1"
                                             colspan="1" aria-label="Product: activate to sort column descending"
-                                            aria-sort="ascending" style="width: 51px;">Product
+                                            aria-sort="ascending" style="width: 51px;">User
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
                                             aria-label="Business type: activate to sort column ascending"
-                                            style="width: 58px;">Business type
+                                            style="width: 58px;">Входящее
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
                                             aria-label="Policy holder: activate to sort column ascending"
-                                            style="width: 43px;">Policy holder
+                                            style="width: 43px;">Ответ
                                         </th>
                                         <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
                                             aria-label="Premium: activate to sort column ascending"
-                                            style="width: 59px;">Premium
+                                            style="width: 59px;">Шаблон
                                         </th>
-                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                            aria-label="Status: activate to sort column ascending" style="width: 43px;">
-                                            Status
-                                        </th>
+{#                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"#}
+{#                                            aria-label="Status: activate to sort column ascending" style="width: 43px;">#}
+{#                                            Статус#}
+{#                                        </th>#}
                                         <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
                                             aria-label="Updated at: activate to sort column ascending"
-                                            style="width: 64px;">Updated at
+                                            style="width: 64px;">Время
                                         </th>
-                                        <th class="details-control sorting_disabled" rowspan="1" colspan="1"
-                                            aria-label="" style="width: 22px;"></th>
+{#                                        <th class="details-control sorting_disabled" rowspan="1" colspan="1"#}
+{#                                            aria-label="" style="width: 22px;"></th>#}
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="odd">
-                                        <td class=" select-checkbox">Incs234</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 1</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>In progress</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Active</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="odd">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Expired</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>In progress</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="odd">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Active</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Active</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="odd">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Active</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Expired</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="odd">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>Active</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
-                                    <tr class="even">
-                                        <td class=" select-checkbox">Incs235</td>
-                                        <td class="sorting_1">Car insurance</td>
-                                        <td>Business type 2</td>
-                                        <td>Jesse Thomas</td>
-                                        <td>$1200</td>
-                                        <td>In progress</td>
-                                        <td>25/04/2020</td>
-                                        <td class=" details-control"></td>
-                                    </tr>
+
+                                    {% for message in message_list %}
+                                        <tr class="even">
+                                            <td><a href="{{ message.account.get_absolute_url }}">{{ message.account.first_name }}</a></td>
+                                            <td><a href="{{ message.user.get_absolute_url }}">{{ message.user.first_name }}</a></td>
+                                            <td><a href="{{ message.get_absolute_url }}">{{ message.text|truncatechars:18 }}</a></td>
+                                            <td>{{ message.answer_question|truncatechars:20 }}"</td>
+                                            <td>{{ message.answer_template|truncatechars:20 }}"</td>
+{#                                            <td>In progress</td>#}
+                                            <td>{{ message.sent_at|date:'Y-m-d H:i'}}</td>
+{#                                            <td></td>#}
+                                        </tr>
+{#                                        <tr class="even">#}
+{#                                            <td class=" select-checkbox">Incs234</td>#}
+{#                                            <td class="sorting_1">Car insurance</td>#}
+{#                                            <td>Business type 1</td>#}
+{#                                            <td>Jesse Thomas</td>#}
+{#                                            <td>$1200</td>#}
+{#                                            <td>In progress</td>#}
+{#                                            <td>25/04/2020</td>#}
+{#                                            <td class=" details-control"></td>#}
+{#                                        </tr>#}
+
+                                    {% endfor %}
+
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-sm-12 col-md-5"></div>
                             <div class="col-sm-12 col-md-7"></div>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
+
     </div>
 
 {% endblock %}
 
 
 {% block plugin_js_for_this_page %}
-    <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
-        <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
-    <script src="{% static 'js/dataTables.select.min.js' %}"></script>
-    <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+    {#    <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>#}
+    {#    <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>#}
+    {#    <script src="{% static 'js/dataTables.select.min.js' %}"></script>#}
+
+    {#    <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>#}
 
 {% endblock %}
 {% block custom_js_for_this_page %}
-{#    <script src="{% static 'js/dashboard.js' %}"></script>#}
-    <script src="{% static 'custom_js/message_list.js' %}"></script>
-    <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>
+    {#        <script src="{% static 'custom_js/message_list.js' %}"></script> #todo c javascript #}
+
+    {#        <script src="{% static 'js/dashboard.js' %}"></script>#}
+    {#    <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>#}
 {% endblock %}

@@ -3,8 +3,8 @@ from pprint import pprint
 from django import template
 from django.urls import reverse
 
-from app_vk_controller.db_peewee import Account
-from app_vk_controller.models import User
+from app_vk_controller import db_peewee
+from app_vk_controller.models import User,Account
 from app_vk_controller.utils import get_weather_bar
 
 register = template.Library()
@@ -22,27 +22,31 @@ def show_weather(request):
 
 
 @register.inclusion_tag('app_vk_controller/template_tags/last_message_info.html')
-def show_last_messages():
+def show_last_messages(): #old
     # return
-    context = {'data': Account.get_main_data()}
+    context = {'data': db_peewee.Account.get_main_data()}
+    # context = {}
+    print(context)
     return context
 
 
 @register.simple_tag
 def get_status(obj):
-    print(obj)
-    if isinstance(obj,Account):
+    print(isinstance(obj, Account))
+    print(isinstance(obj, User))
+    if isinstance(obj, Account):
+        print(obj)
         if obj.blocked:
-            return ('danger', 'Blocked')
+            return 'danger', 'Blocked'
         elif obj.start_status:
-            return ('success', 'Active')
+            return 'success', 'Active'
         else:
-            return ('warning', 'Stopped')
-    elif isinstance(obj,User, ):
+            return 'warning', 'Stopped'
+    elif isinstance(obj, User):
         if obj.blocked:
-            return ('danger', 'Blocked')
+            return 'danger', 'Blocked'
         else:
-            return ('success', 'Active')
+            return 'success', 'Active'
 
 
 @register.simple_tag

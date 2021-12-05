@@ -14,39 +14,99 @@
 
 {% block main_panel %}
     <div class="content-wrapper">
-        <div class="d-flex" style="margin-left: 35%; margin-right: auto; width:60%">
-            <div class="col-md-6 grid-margin">
+        <div class="d-flex">
+            <div class="col-md-3 grid-margin">
                 <div class="card">
                     <div class="card-body">
                         <div>
                             <p style="display: inline-block"
-                               class="text-info mb-1">{{ user.first_name }} {{ user.last_name }}</p>
-                            <img class="account-img" style="width:3em;float : right" src="{{ user.photo_url }}" alt="">
+                               class="text-dark mb-1">Аккаунт </p>
                         </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">Пользователь</p>
+                        </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">Время</p>
+                        </div>
+                        {#                        <div>#}
+                        {#                            <p style="display: inline-block"#}
+                        {#                               class="text-info mb-1">Получено от {{ message.user }}</p>#}
+                        {#                        </div>#}
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-5 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+
+                            <p style="display: inline-block"
+                               class="text-info mb-1">
+                                <a href="{{ message.account.get_absolute_url }}">{{ message.account }}</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-info mb-1">
+                                <a href="{{ message.user.get_absolute_url }}">{{ message.user }}</a>
+
+                            </p>
+                        </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">{{ message.sent_at }}</p>
+                        </div>
+                        {#                        <div>#}
+                        {#                            <p style="display: inline-block"#}
+                        {#                               class="text-info mb-1">Получено от {{ message.user }}</p>#}
+                        {#                        </div>#}
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <div class="row">
 
-            <!-- Ключи полей-->
-            <div class="col-md-6 grid-margin">
+            <!-- Вопрос -->
+            <div class="col-md-4 grid-margin">
+                <p class="text-success">Полученное сообщение</p>
                 <div class="card">
+
                     <div class="card-body">
                         {{ message.text }}
                     </div>
                 </div>
             </div>
 
-            <!-- Значения полей-->
-            <div class="col-md-6 grid-margin">
+            <!-- Ответ -->
+            <div class="col-md-4 grid-margin">
+                <p class="text-success">Ответ</p>
+
                 <div class="card">
                     <div class="card-body">
-                        {{ user.first_name }}
-                        {{ user.last_name }}
+                        {{ message.answer_question }}
+
                     </div>
                 </div>
             </div>
+
+            <!-- Шаблон -->
+            <div class="col-md-4 grid-margin">
+                <p class="text-success">Шаблон</p>
+
+                <div class="card">
+                    <div class="card-body">
+                        {{ message.answer_template }}
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 {% endblock %}

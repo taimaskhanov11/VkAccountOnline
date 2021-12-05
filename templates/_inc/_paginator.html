@@ -1,0 +1,83 @@
+{#<div class="btn-group" role="group" aria-label="Basic example">#}
+{#    <button type="button" class="btn btn-primary">1</button>#}
+{#    <button type="button" class="btn btn-primary">2</button>#}
+{#    <button type="button" class="btn btn-primary">3</button>#}
+{#</div>#}
+
+
+
+
+{% if page_obj.has_other_pages %}
+    <div class="btn-group" role="group" aria-label="Basic example">
+        {% if page_obj.has_previous %}
+            <button onclick='document.location="?{{ s }}page={{ page_obj.previous_page_number }}"'
+                    class="btn btn-primary" type="button"
+                    aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </button>
+        {% endif %}
+        {#            {{ page_obj.paginator }}#}
+        {% for p in paginator.page_range %}
+            {% if page_obj.number == p %}
+                <button type="button" class="btn btn-outline-secondary">{{ p }}</button>
+{#                <button type="button" class="btn btn-primary inactive">{{ p }}</button>#}
+            {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                <button onclick='document.location="?{{ s }}page={{ p }}"' type="button" class="btn btn-primary">
+                    {{ p }}
+                </button>
+            {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+            <button onclick='document.location="?{{ s }}page={{ page_obj.next_page_number }}"' type="button"
+                    class="btn btn-primary" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </button>
+        {% endif %}
+
+    </div>
+
+{% endif %}
+
+
+
+{##}
+{#{% if page_obj.has_other_pages %}#}
+{##}
+{#    <nav aria-label="Page navigation example">#}
+{#        <ul class="pagination pagination-lg">#}
+{##}
+{#            {% if page_obj.has_previous %}#}
+{#                <li class="page-item">#}
+{#                    <a class="page-link" href="?{{ s }}page={{ page_obj.previous_page_number }}" aria-label="Previous">#}
+{#                        <span aria-hidden="true">&laquo;</span>#}
+{#                    </a>#}
+{#                </li>#}
+{#            {% endif %}#}
+{#            {{ page_obj.paginator }}#}
+{#            {% for p in paginator.page_range %}#}
+{##}
+{#                {% if page_obj.number == p %}#}
+{#                    <li class="page-item active"><a class="page-link" href="#">{{ p }}</a></li>#}
+{##}
+{#                {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}#}
+{#                    <li class="page-item">#}
+{#                        <a class="page-link" href="?{{ s }}page={{ p }}">{{ p }}</a>#}
+{#                    </li>#}
+{#                {% endif %}#}
+{##}
+{#            {% endfor %}#}
+{##}
+{#            {% if page_obj.has_next %}#}
+{#                <li class="page-item">#}
+{#                    <a class="page-link" href="?{{ s }}page={{ page_obj.next_page_number }}" aria-label="Next">#}
+{#                        <span aria-hidden="true">&raquo;</span>#}
+{#                    </a>#}
+{#                </li>#}
+{##}
+{#            {% endif %}#}
+{##}
+{#        </ul>#}
+{#    </nav>#}
+{##}
+{#{% endif %}#}
+

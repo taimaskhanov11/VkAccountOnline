@@ -23,7 +23,7 @@ class HomeView(View):
 
     def get(self, request, *args):
         return render(request, 'app_vk_controller/index.html', {'dashboard_active': 'active',
-                                                            'dashboard_show': 'show'})
+                                                                'dashboard_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
 
@@ -31,7 +31,7 @@ class ButtonsView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/ui-features/buttons.html', {'ui_elements_active': 'active',
-                                                                          'ui_elements_show': 'show'})
+                                                                              'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
 
@@ -39,7 +39,7 @@ class DropdownsView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/ui-features/dropdowns.html', {'ui_elements_active': 'active',
-                                                                            'ui_elements_show': 'show'})
+                                                                                'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
 
@@ -47,7 +47,7 @@ class TypographyView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/ui-features/typography.html', {'ui_elements_active': 'active',
-                                                                             'ui_elements_show': 'show'})
+                                                                                 'ui_elements_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
 
@@ -55,7 +55,7 @@ class BasicElementsView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/forms/basic_elements.html', {'form_element_active': 'active',
-                                                                           'form_element_show': 'show'})
+                                                                               'form_element_show': 'show'})
         # return render(request, 'vk_accounts/index.html')
 
 
@@ -63,21 +63,21 @@ class ChartJsView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/charts/chartjs.html', {'charts_active': 'active',
-                                                                     'charts_show': 'show'})
+                                                                         'charts_show': 'show'})
 
 
 class BasicTableView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/tables/basic-table.html', {'tables_active': 'active',
-                                                                         'tables_show': 'show'})
+                                                                             'tables_show': 'show'})
 
 
 class Mdi(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app_vk_controller/icons/mdi.html', {'icons_active': 'active',
-                                                                'icons_show': 'show'})
+                                                                    'icons_show': 'show'})
 
 
 class Error404View(View):
@@ -98,17 +98,13 @@ class DocumentationView(TemplateView):
     #     return render(request, '')
 
 
-
-
 class MessageDetailView(DetailView):
     model = Message
 
 
 class MessageListView(ListView):
     model = Message
-
-
-
+    paginate_by = 10
 
 class LastMessageListView(TemplateView):
     """Подгрузка с помощью javascript """
@@ -148,12 +144,12 @@ class VkUserDetailView(DetailView):
         }
         return context
 
+
 class VkUserListView(ListView):
     model = User
     template_name = 'app_vk_controller/vk_user_detail.html'
     extra_context = {'vk_accounts_active': 'active',
                      'vk_accounts_show': 'show', }
-
 
 
 # old

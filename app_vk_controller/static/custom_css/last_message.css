@@ -1,8 +1,11 @@
 .span-text {
     word-wrap: normal;
-
     word-break: break-all;
 }
+.date-time {
+    font-size: 0.9em;
+}
+
 /*table {*/
 /*    !*table-layout: fixed;*!*/
 /*    width:100%*/

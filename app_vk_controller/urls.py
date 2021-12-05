@@ -18,7 +18,7 @@ urlpatterns = [
     path('vk-accs/', views.VkAccountListView.as_view(), name='vk_accs'),
     path('vk-acc/<pk>/', views.VkAccountDetailView.as_view(), name='vk_acc_detail'),
     path('vk-users/', views.VkUserListView.as_view(), name='vk_users'),
-    path('vk-users/<pk>/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
+    path('vk-user/<pk>/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
 
     # path('messages/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
     path('messages/', views.MessageListView.as_view(), name='messages'),

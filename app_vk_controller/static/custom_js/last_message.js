@@ -1,9 +1,7 @@
 let isPaused = true;
 
 const $message = $('#message-data');
-
 const $loadingButton = $('#my_form')
-
 const nowMessages = []
 
 
@@ -21,10 +19,10 @@ function getUser(id) {
 function splitByIndex(value, index) {
     let length = value.length
     // let stringLength = length / index
-    console.log(length)
+    // console.log(length)
     let endSting = '';
     for (var i = 0; i < length; i += index) {
-        console.log(i)
+        // console.log(i)
         // let preEnd = index + i
         // if (preEnd < length) {
         //     endSting += value.substring(i, index + i) + '<br>'
@@ -39,65 +37,132 @@ function splitByIndex(value, index) {
 }
 
 
+const accounts = {}
+const users = {}
+
+
+function getName(type, id) {
+    $.getJSON(`/api/${type}/${id}/`, function (data) {
+        if (type === 'users') {
+            users[id] = data['first_name']
+        } else {
+            accounts[id] = data['first_name']
+            console.log('ПОЛУЧЕН')
+        }
+
+    })
+}
+
+
 function createMessageElement(message, user_data) {
     let tr = document.createElement('tr');
     // tr.classList.add("my-class");
     let td1 = document.createElement('td');
     let p1 = document.createElement('p')
-    let txt2 = document.createTextNode(message['account']);
 
-    p1.appendChild(txt2);
+    let account_id = message['account']
+    // console.log(typeof account_id)
+
+    // todo
+    // if (!Object.keys(accounts).includes(account_id)) {
+    //     console.log('USER', account_id)
+    //     getName('accounts', account_id)
+    //     console.log(accounts)
+    // }
+
+    console.log('POOOK')
+    // let txt2 = document.createTextNode(account_id);
+    let txt2 = document.createTextNode(accounts[account_id]);
+    let a2 = document.createElement('a')
+    a2.setAttribute('href', `/vk-acc/${account_id}`)
+    a2.appendChild(txt2)
+
+    p1.appendChild(a2);
     td1.appendChild(p1);
     tr.appendChild(td1);
 
+
     // user
     let td2 = document.createElement('td');
-    let txt3 = document.createTextNode(user_data['name']);
-
-    td2.appendChild(txt3);
+    let txt3 = document.createTextNode(user_data['first_name']);
+    // td2.appendChild(txt3);
+    let a3 = document.createElement('a')
+    a3.setAttribute('href', `/vk-user/${user_data['id']}`)
+    a3.appendChild(txt3)
+    td2.appendChild(a3)
     tr.appendChild(td2);
+
+
+    let x = 0,
+        y = 16;
+
 
     //text
     let td3 = document.createElement('td');
     let span3 = document.createElement('span');
     span3.classList.add('span-text');
-
     // let txt4 = document.createTextNode(messageText);
-
-
-    span3.innerHTML = splitByIndex(message['text'], 40);
+    let txt4 = document.createTextNode(message['text'].substring(x, y) + '...');
+    // span3.innerHTML = splitByIndex(message['text'], 40);
     // span3.innerHTML= message['text']
+    let a4 = document.createElement('a')
+    span3.appendChild(txt4);
 
-    // span3.appendChild(txt4);
-    td3.appendChild(span3);
+    a4.setAttribute('href', `/message/${message['id']}`)
+    a4.appendChild(span3)
+    td3.appendChild(a4);
     tr.appendChild(td3);
 
 
+    //answer
     let td4 = document.createElement('td');
-    let txt5 = document.createTextNode(message['answer_question']);
+    let txt5 = document.createTextNode(message['answer_question'].substring(x, y) + '...');
+    // let txt5 = document.createTextNode(message['answer_question']);
     td4.appendChild(txt5);
+
+    // td4.innerHTML = splitByIndex(message['answer_question'], 40)
+
     tr.appendChild(td4);
     // await new Promise(r => setTimeout(r, 1000));
 
+
+    //template
     let td5 = document.createElement('td');
-    let txt6 = document.createTextNode(message['answer_template']);
+    // let txt6 = document.createTextNode(message['answer_template']);
+    let txt6 = document.createTextNode(message['answer_template'].substring(x, y) + '...');
     td5.appendChild(txt6);
+
+    // td5.innerHTML = splitByIndex(message['answer_template'], 40)
+
     tr.appendChild(td5);
     // await new Promise(r => setTimeout(r, 1000));
 
+
+    //status
     let td6 = document.createElement('td');
     let lab = document.createElement('label');
-    lab.classList.add('badge', 'badge-danger')
-    let txt7 = document.createTextNode('Pending');
+    console.log(user_data)
+    let blocking = !user_data['blocked'] ? ['success', 'Активен'] : ['danger', 'Заблокирован'];
+    lab.classList.add('badge', `badge-${blocking[0]}`)
+    // lab.classList.add('badge', 'badge-danger')
+    let txt7 = document.createTextNode(blocking[1]);
     lab.appendChild(txt7);
     td6.appendChild(lab);
     tr.appendChild(td6);
 
-    // setTimeout(() => {
-    //     if (!isPaused) {
-    //         $message.prepend(tr);
-    //     }
-    // }, second);
+
+    //time
+    let td7 = document.createElement('td');
+    // let txt8 = document.createTextNode(message['sent_at']);
+    let date = new Date(message['sent_at']);
+    let txt8 = document.createTextNode(date.toLocaleString());
+    let span8 = document.createElement('span')
+    span8.classList.add('date-time')
+    span8.appendChild(txt8)
+    td7.appendChild(span8)
+    tr.appendChild(td7);
+
+
     return tr
 }
 
@@ -129,10 +194,32 @@ function doStuff() {
                     nowMessages.push(message['id']);
                     // getAccount(message);
                     console.log(message, 'message');
-                    let tr = createMessageElement(message, user_data);
-                    second += 500;
-                    $message.prepend(tr);
-                    console.log('запись');
+
+
+                    // let tr = createMessageElement(message, user_data);
+                    // second += 500;
+                    // $message.prepend(tr);
+                    // console.log('запись');
+
+                    if (!Object.keys(accounts).includes(String(message['account']))) {
+                        // getName()
+                        $.getJSON(`/api/accounts/${message['account']}/`, function (data) {
+                                accounts[message['account']] = data['first_name']
+                                let tr = createMessageElement(message, user_data);
+                                second += 500;
+                                $message.prepend(tr);
+                                console.log('запись1');
+                            }
+                        )
+
+                    } else {
+                        let tr = createMessageElement(message, user_data);
+                        second += 500;
+                        $message.prepend(tr);
+                        console.log('запись2');
+                    }
+
+
                     // $account.append(tr);
                 })
             })
