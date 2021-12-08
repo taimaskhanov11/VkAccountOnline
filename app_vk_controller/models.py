@@ -49,9 +49,10 @@ class User(models.Model):
         return reverse('vk_user_detail', kwargs={'pk': self.pk})
 
 
-class Numbers(models.Model):
+class Number(models.Model):
     account = models.ForeignKey('Account', on_delete=models.CASCADE, related_name='numbers')
-    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name='number')
+    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name='numbers')
+    number = models.TextField('номер')
     date = models.DateTimeField('получен', auto_now_add=True)
     created_at = models.DateTimeField('дата создания', auto_now_add=True)
 
@@ -62,7 +63,7 @@ class Numbers(models.Model):
         return self.user.first_name
 
     def get_absolute_url(self):
-        return reverse('numbers', kwargs={'pk': self.pk})
+        return reverse('number_detail', kwargs={'pk': self.pk})
 
 
 class Category(models.Model):

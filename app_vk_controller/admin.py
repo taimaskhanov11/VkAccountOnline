@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from app_vk_controller.models import Account, User, Category, Input, Output, Message, Numbers
+from app_vk_controller.models import Account, User, Category, Input, Output, Message, Number
 
 
 
@@ -32,7 +32,7 @@ class MessageAdmin(admin.ModelAdmin):
     pass
 
 
-class NumbersAdmin(admin.ModelAdmin):
+class NumberAdmin(admin.ModelAdmin):
     pass
 
 
@@ -43,4 +43,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Input, InputAdmin)
 admin.site.register(Output, OutputAdmin)
 admin.site.register(Message, MessageAdmin)
-admin.site.register(Numbers, NumbersAdmin)
+admin.site.register(Number, NumberAdmin)

@@ -4,7 +4,7 @@ from django import template
 from django.urls import reverse
 
 from app_vk_controller import db_peewee
-from app_vk_controller.models import User,Account
+from app_vk_controller.models import User, Account
 from app_vk_controller.utils import get_weather_bar
 
 register = template.Library()
@@ -22,7 +22,7 @@ def show_weather(request):
 
 
 @register.inclusion_tag('app_vk_controller/template_tags/last_message_info.html')
-def show_last_messages(): #old
+def show_last_messages():  # old
     # return
     context = {'data': db_peewee.Account.get_main_data()}
     # context = {}
@@ -32,21 +32,19 @@ def show_last_messages(): #old
 
 @register.simple_tag
 def get_status(obj):
-    print(isinstance(obj, Account))
-    print(isinstance(obj, User))
     if isinstance(obj, Account):
         print(obj)
         if obj.blocked:
             return 'danger', 'Blocked'
         elif obj.start_status:
-            return 'success', 'Active'
+            return 'success', 'Active', 'warning', 'Приостановить',
         else:
-            return 'warning', 'Stopped'
+            return 'warning', 'Stopped', 'success', 'Активировать',
     elif isinstance(obj, User):
         if obj.blocked:
-            return 'danger', 'Blocked'
+            return 'danger', 'Blocked', 'success', 'Active'
         else:
-            return 'success', 'Active'
+            return 'success', 'Active', 'danger', 'Blocked'
 
 
 @register.simple_tag

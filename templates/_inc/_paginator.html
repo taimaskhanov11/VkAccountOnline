@@ -21,7 +21,7 @@
             {% if page_obj.number == p %}
                 <button type="button" class="btn btn-outline-secondary">{{ p }}</button>
 {#                <button type="button" class="btn btn-primary inactive">{{ p }}</button>#}
-            {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+            {% elif p > page_obj.number|add:-5 and p < page_obj.number|add:5 %}
                 <button onclick='document.location="?{{ s }}page={{ p }}"' type="button" class="btn btn-primary">
                     {{ p }}
                 </button>

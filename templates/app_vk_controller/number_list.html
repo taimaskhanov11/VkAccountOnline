@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ message.text|truncatewords:3 }}
+{% endblock %}
+
+
+{% block main_panel %}
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-10 stretch-card grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-0">Got Numbers</p>
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead>
+                                <tr>
+                                    <th class="pl-0  pb-2 border-bottom">Users</th>
+                                    <th class="border-bottom pb-2">Numbers</th>
+                                    <th class="border-bottom pb-2">Date</th>
+                                    <th class="border-bottom pb-2">Account</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for number in number_list %}
+                                    <tr>
+                                        <td class="pl-0"><a href="{{ number.user.get_absolute_url }}">{{ number.user.first_name }}</a></td>
+                                        <td>
+                                            <p class="mb-0">
+                                            <span class="mr-2">
+                                            <a href="{{ number.get_absolute_url }}">{{ number.number }}</a>
+                                            </span>
+                                        </p>
+                                        </td>
+                                        <td class="text-muted">{{ number.created_at }}</td>
+                                        <td class="text-muted"><a href="{{ number.account.get_absolute_url }}">{{ number.account.first_name }}</a></td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+

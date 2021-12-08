@@ -16,15 +16,17 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
     path('vk-accs/', views.VkAccountListView.as_view(), name='vk_accs'),
-    path('vk-acc/<pk>/', views.VkAccountDetailView.as_view(), name='vk_acc_detail'),
+    path('vk-accs/<pk>/', views.VkAccountDetailView.as_view(), name='vk_acc_detail'),
     path('vk-users/', views.VkUserListView.as_view(), name='vk_users'),
-    path('vk-user/<pk>/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
+    path('vk-users/<pk>/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
 
     # path('messages/', views.VkUserDetailView.as_view(), name='vk_user_detail'),
     path('messages/', views.MessageListView.as_view(), name='messages'),
-    path('message/<pk>/', views.MessageDetailView.as_view(), name='message_detail'),
+    path('messages/<pk>/', views.MessageDetailView.as_view(), name='message_detail'),
     path('last-messages/', views.LastMessageListView.as_view(), name='last_messages'),
     # path('vk-accounts/last_messages', views.VkAccountsView.as_view(), name='vk_accounts'),
+    path('numbers/', views.NumberListView.as_view(), name='numbers'),
+    path('numbers/<pk>/', views.NumberDetailView.as_view(), name='number_detail'),
 
     path('buttons/', views.ButtonsView.as_view(), name='buttons'),
     path('dropdowns/', views.DropdownsView.as_view(), name='dropdowns'),

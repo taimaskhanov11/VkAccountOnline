@@ -10,13 +10,14 @@ from django.views.generic import TemplateView, DetailView, ListView
 
 # from app_vk_controller.db_peewee import Account
 # from app_vk_controller.forms import AcceptCodeForm
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import status
-from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import ListModelMixin, CreateModelMixin
+# from rest_framework.response import Response
+# from rest_framework.views import APIView
+# from rest_framework import status
+# from rest_framework.generics import GenericAPIView
+# from rest_framework.mixins import ListModelMixin, CreateModelMixin
 
-from app_vk_controller.models import Account, Message, User
+from app_vk_controller.models import Account, Message, User, Number
+from app_vk_controller.service import VkAccountDataMixin
 
 
 class HomeView(View):
@@ -98,38 +99,60 @@ class DocumentationView(TemplateView):
     #     return render(request, '')
 
 
-class MessageDetailView(DetailView):
+class MessageDetailView(VkAccountDataMixin, DetailView):
     model = Message
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
 
-class MessageListView(ListView):
+class MessageListView(VkAccountDataMixin, ListView):
     model = Message
     paginate_by = 10
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
-class LastMessageListView(TemplateView):
+
+class LastMessageListView(VkAccountDataMixin, TemplateView):
     """Подгрузка с помощью javascript """
     template_name = 'app_vk_controller/last_messages.html'
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show'}
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
 
-class VkAccountListView(ListView):  # todo
+class VkAccountListView(VkAccountDataMixin, ListView):  # todo
     model = Account
     template_name = 'app_vk_controller/vk_accounts.html'
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
 
-class VkAccountDetailView(DetailView):
+    def post(self, request, *args, **kwargs):
+        pk = request.POST.get('account')
+        print(request.POST)
+        account = Account.objects.get(pk=int(pk))
+        if account.start_status:
+            account.start_status = False
+        else :
+            account.start_status = True
+        account.save()
+        return self.get(request, *args, **kwargs)
+
+
+
+
+class VkAccountDetailView(VkAccountDataMixin, DetailView):
     model = Account
     template_name = 'app_vk_controller/vk_account_detail.html'
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show', }
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
 
-class VkUserDetailView(DetailView):
+class VkUserDetailView(VkAccountDataMixin, DetailView):
     model = User
     template_name = 'app_vk_controller/vk_user_detail.html'
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show', }
+
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -145,11 +168,26 @@ class VkUserDetailView(DetailView):
         return context
 
 
-class VkUserListView(ListView):
+class VkUserListView(VkAccountDataMixin, ListView):
     model = User
-    template_name = 'app_vk_controller/vk_user_detail.html'
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show', }
+    template_name = 'app_vk_controller/vk_user_list.html'
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
+
+
+class NumberListView(VkAccountDataMixin, ListView):
+    model = Number
+    # template_name = 'app_vk_controller/number_detail.html'
+
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
+
+
+class NumberDetailView(VkAccountDataMixin, ListView):
+    model = Number
+    # template_name = 'app_vk_controller/number_list.html'
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
 
 
 # old
