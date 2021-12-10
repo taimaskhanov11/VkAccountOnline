@@ -41,7 +41,7 @@
                                     <div class="d-flex">
                                         {#                                    <img src="/static/images/faces/face2.jpg" alt="user">#}
                                         <div>
-                                            <p class="text-dark mb-0">{{ user_field }}</p>
+                                            <p class="text-dark mb-2">{{ user_field }}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -54,46 +54,75 @@
             <div class="col-md-3 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        <ul class="icon-data-list">
-                            {% for key, user_value in user_info.items %}
-                                <li>
-                                    <div class="d-flex">
-                                        {#                                    <img src="/static/images/faces/face2.jpg" alt="user">#}
-                                        <div>
-                                            {% if key == 'Статус блокировки' %}
-                                                {% get_status user as status %}
-                                                <p class="mb-0 display-6 badge badge-{{ status.0 }}">{{ status.1 }}</p>
+                        <form method="post" id="status-form">
+                            {% csrf_token %}
+                            <ul class="icon-data-list">
+                                {% for key, user_value in user_info.items %}
+                                    {#                                    {% if key == 'Статус блокировки' %}#}
+                                    {#                                    {% elif key == 'Текущая стадия' %}#}
+                                    {#                                    {% else %}#}
+                                    <li>
+                                        <div class="d-flex">
+                                            <div>
 
-                                            {% elif key == 'Последнее сообщение' %}
-                                                <p class="text-primary mb-0">
-                                                    <a class="text-info" href="{{ user_value.get_absolute_url }}">
-                                                        {{ user_value|truncatewords:3 }}
-                                                    </a>
-                                                </p>
+                                                {% if key == 'Последнее сообщение' %}
+                                                    <p class="text-primary mb-2">
+                                                        <a class="text-info"
+                                                           href="{{ user_value.get_absolute_url }}">
+                                                            {{ user_value|truncatewords:3 }}
+                                                        </a>
+                                                    </p>
 
-                                            {% elif key == 'Ссылка в ВКонтакте' %}
-                                                <p class="mb-0">
-                                                    <a class="text-info" href="{{ user_value }}">VK</a>
-                                                </p>
-                                            {% elif key == 'Прикреплен к боту' %}
-                                                <p class="mb-0">
-                                                    <a class="text-info" href="{{ user_value.get_absolute_url }}">
-                                                        {{ user_value.first_name }} {{ user_value.last_name }}
-                                                    </a>
-                                                </p>
+                                                {% elif key == 'Ссылка в ВКонтакте' %}
+                                                    <p class="mb-2">
+                                                        <a class="text-info" href="{{ user_value }}">VK</a>
+                                                    </p>
+                                                {% elif key == 'Прикреплен к боту' %}
+                                                    <p class="mb-2">
+                                                        <a class="text-info"
+                                                           href="{{ user_value.get_absolute_url }}">
+                                                            {{ user_value.first_name }} {{ user_value.last_name }}
+                                                        </a>
+                                                    </p>
+                                                {% elif key == 'Статус блокировки' %}
+                                                    {% get_status user as status %}
+                                                    {#                                                    <p class="mb-2 display-6 badge badge-{{ status.0 }}">{{ status.1 }}</p>#}
+                                                    <div class="dropdown">
+                                                        <button id="user-status-button"
+                                                                class="btn btn-{{ status.0 }} badge  btn-sm dropdown-toggle"
+                                                                type="button" id="dropdownMenuSizeButton3"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                            {{ status.1 }}
+                                                        </button>
+                                                        {{ form.blocked }}
+                                                        <div class="dropdown-menu"
+                                                             aria-labelledby="dropdownMenuSizeButton3">
+                                                            <a id="dropdown-name"
+                                                               class="dropdown-item">{{ status.3 }}</a>
+                                                        </div>
+                                                    </div>
 
+                                                {% elif key == 'Текущая стадия' %}
+                                                    {{ form.status }}
+                                                    <p class="text-dark mb-0">
+                                                        <label>
+                                                            <input name="state" type="text" value="{{ user.state }}"
+                                                                   class="form-control"
+                                                                   placeholder="Name">
+                                                        </label>
+                                                    </p>
 
-                                            {% else %}
-                                                <p class="text-dark mb-0">{{ user_value }}</p>
-                                            {% endif %}
+                                                {% else %}
+                                                    <p class="text-dark mb-2">{{ user_value }}</p>
+                                                {% endif %}
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            {% endfor %}
-
-
-                        </ul>
-
+                                    </li>
+                                    {#                                    {% endif %}#}
+                                {% endfor %}
+                            </ul>
+                        </form>
 
                     </div>
                 </div>
@@ -103,8 +132,32 @@
             <div class="col-md-6 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        {{ user.first_name }}
-                        {{ user.last_name }}
+                        {#                        {{ user.first_name }}#}
+                        {#                        {{ user.last_name }}#}
+
+                        <p>
+                            <button onclick="document.location.href='{% url 'messages_by_user' user.pk %}'" type="button" class="btn btn-primary btn-icon-text">
+                                <i class="mdi mdi-message-processing"></i>
+                                Показать все сообщения
+
+                            </button>
+                        </p>
+
+                        <button id="send-form-button" type="button"
+                                class="btn btn-primary btn-icon-text">
+                            <i class="ti-file btn-icon-prepend"></i>
+                            Сохранить изменения
+                        </button>
+
+                        <p class="text-success">{{ status_succes }}</p>
+
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                <p class="text-danger">{{ field }} :: {{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                        {#                        {% for error in errors %}#}
+                        {#                        {{ form.as_p }}#}
                     </div>
                 </div>
             </div>
@@ -114,6 +167,7 @@
 
 
 {% block custom_js_for_this_page %}
-{#    <script src="{% static 'custom_js/vk_account_detail.js' %}"></script> #todo#}
+    {#    <script src="{% static 'custom_js/vk_account_detail.js' %}"></script> #todo#}
+    <script src="{% static 'custom_js/vk_user_detail.js' %}"></script> #todo
     {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
 {% endblock %}

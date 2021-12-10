@@ -3,11 +3,11 @@
 {% load vk_tags %}
 
 {% block title %}
-    {{ message.text|truncatewords:3 }}
+    {{ title }}
 {% endblock %}
 {% block plugin_css_for_this_pages %}
     <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
-{#    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">#}
 {% endblock %}
 
 {% block main_panel %}
@@ -17,97 +17,122 @@
         <div class="row">
             <div class="col-11">
                 <div class="table-responsive">
+                    <!-- Message choice -->
+                    <div class="dropdown">
+                        <button class="btn btn-danger btn-group-xs dropdown-toggle col-sm-12" type="button"
+                                id="dropdownMenuSizeButton1" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            {{ title }}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton1" style="">
+                            {% get_all_accounts_and_users as accs_users %}
+                            <h6 class="dropdown-header"># Аккаунты</h6>
+                            {% for acc in accs_users.accounts %}
+                                <a class="dropdown-item"
+                                   href="{% url 'messages_by_account' acc.pk %}">{{ acc.first_name }}</a>
+                            {% endfor %}
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header"># Пользователи</h6>
+                            {% for user in accs_users.users %}
+                                <a class="dropdown-item"
+                                   href="{% url 'messages_by_user' user.pk %}">{{ user.first_name }}</a>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    <!-- Paginator -->
+                    {% include '_inc/_paginator.html' %}
                     <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                         <div class="row">
                             <div class="col-sm-12 col-md-6"></div>
                             <div class="col-sm-12 col-md-6"></div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12">
 
-                                <!-- Paginator -->
-                                {% include '_inc/_paginator.html' %}
+                            <table id="example" class="display expandable-table dataTable no-footer"
+                                   style="width: 100%;" role="grid">
+                                <thead>
+                                <tr role="row">
+                                    <th class="select-checkbox sorting_disabled" rowspan="1" colspan="1"
+                                        aria-label="Quote#" style="width: 70px;">Аккаунт#
+                                    </th>
+                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1"
+                                        colspan="1" aria-label="Product: activate to sort column descending"
+                                        aria-sort="ascending" style="width: 51px;">User
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                        aria-label="Business type: activate to sort column ascending"
+                                        style="width: 58px;">Входящее
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                        aria-label="Policy holder: activate to sort column ascending"
+                                        style="width: 43px;">Ответ
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                        aria-label="Premium: activate to sort column ascending"
+                                        style="width: 59px;">Шаблон
+                                    </th>
+                                    {#                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"#}
+                                    {#                                            aria-label="Status: activate to sort column ascending" style="width: 43px;">#}
+                                    {#                                            Статус#}
+                                    {#                                        </th>#}
+                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                        aria-label="Updated at: activate to sort column ascending"
+                                        style="width: 64px;">Время
+                                    </th>
+                                    {#                                        <th class="details-control sorting_disabled" rowspan="1" colspan="1"#}
+                                    {#                                            aria-label="" style="width: 22px;"></th>#}
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                                <!-- Messages table -->
-
-                                <table id="example" class="display expandable-table dataTable no-footer"
-                                       style="width: 100%;" role="grid">
-                                    <thead>
-                                    <tr role="row">
-                                        <th class="select-checkbox sorting_disabled" rowspan="1" colspan="1"
-                                            aria-label="Quote#" style="width: 70px;">Аккаунт#
-                                        </th>
-                                        <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1"
-                                            colspan="1" aria-label="Product: activate to sort column descending"
-                                            aria-sort="ascending" style="width: 51px;">User
-                                        </th>
-                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                            aria-label="Business type: activate to sort column ascending"
-                                            style="width: 58px;">Входящее
-                                        </th>
-                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                            aria-label="Policy holder: activate to sort column ascending"
-                                            style="width: 43px;">Ответ
-                                        </th>
-                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                            aria-label="Premium: activate to sort column ascending"
-                                            style="width: 59px;">Шаблон
-                                        </th>
-{#                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"#}
-{#                                            aria-label="Status: activate to sort column ascending" style="width: 43px;">#}
-{#                                            Статус#}
-{#                                        </th>#}
-                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                            aria-label="Updated at: activate to sort column ascending"
-                                            style="width: 64px;">Время
-                                        </th>
-{#                                        <th class="details-control sorting_disabled" rowspan="1" colspan="1"#}
-{#                                            aria-label="" style="width: 22px;"></th>#}
+                                {% for message in message_list %}
+                                    <tr class="even">
+                                        <td>
+                                            <a href="{{ message.account.get_absolute_url }}">{{ message.account.first_name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ message.user.get_absolute_url }}">{{ message.user.first_name }}</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ message.get_absolute_url }}">{{ message.text|truncatechars:18 }}</a>
+                                        </td>
+                                        <td>{{ message.answer_question|truncatechars:20 }}"</td>
+                                        <td>{{ message.answer_template|truncatechars:20 }}"</td>
+                                        {#                                            <td>In progress</td>#}
+                                        <td>{{ message.sent_at|date:'Y-m-d H:i' }}</td>
+                                        {#                                            <td></td>#}
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                    {#                                        <tr class="even">#}
+                                    {#                                            <td class=" select-checkbox">Incs234</td>#}
+                                    {#                                            <td class="sorting_1">Car insurance</td>#}
+                                    {#                                            <td>Business type 1</td>#}
+                                    {#                                            <td>Jesse Thomas</td>#}
+                                    {#                                            <td>$1200</td>#}
+                                    {#                                            <td>In progress</td>#}
+                                    {#                                            <td>25/04/2020</td>#}
+                                    {#                                            <td class=" details-control"></td>#}
+                                    {#                                        </tr>#}
 
-                                    {% for message in message_list %}
-                                        <tr class="even">
-                                            <td><a href="{{ message.account.get_absolute_url }}">{{ message.account.first_name }}</a></td>
-                                            <td><a href="{{ message.user.get_absolute_url }}">{{ message.user.first_name }}</a></td>
-                                            <td><a href="{{ message.get_absolute_url }}">{{ message.text|truncatechars:18 }}</a></td>
-                                            <td>{{ message.answer_question|truncatechars:20 }}"</td>
-                                            <td>{{ message.answer_template|truncatechars:20 }}"</td>
-{#                                            <td>In progress</td>#}
-                                            <td>{{ message.sent_at|date:'Y-m-d H:i'}}</td>
-{#                                            <td></td>#}
-                                        </tr>
-{#                                        <tr class="even">#}
-{#                                            <td class=" select-checkbox">Incs234</td>#}
-{#                                            <td class="sorting_1">Car insurance</td>#}
-{#                                            <td>Business type 1</td>#}
-{#                                            <td>Jesse Thomas</td>#}
-{#                                            <td>$1200</td>#}
-{#                                            <td>In progress</td>#}
-{#                                            <td>25/04/2020</td>#}
-{#                                            <td class=" details-control"></td>#}
-{#                                        </tr>#}
+                                {% endfor %}
 
-                                    {% endfor %}
+                                </tbody>
+                            </table>
 
-                                    </tbody>
-                                </table>
-
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-5"></div>
-                            <div class="col-sm-12 col-md-7"></div>
-                        </div>
-
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5"></div>
+                        <div class="col-sm-12 col-md-7"></div>
                     </div>
 
                 </div>
 
             </div>
+
         </div>
+    </div>
 
     </div>
 

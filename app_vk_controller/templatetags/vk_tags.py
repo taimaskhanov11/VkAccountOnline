@@ -48,8 +48,13 @@ def get_status(obj):
 
 
 @register.simple_tag
-def get_object_dict(obj):
-    return obj.__dict__
+def get_all_accounts_and_users():
+    context = {
+        'users': User.objects.all(),
+        'accounts': Account.objects.all()
+    }
+
+    return context
 
 
 @register.inclusion_tag('app_vk_controller/template_tags/accounts_info.html')

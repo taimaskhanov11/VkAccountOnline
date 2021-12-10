@@ -3,18 +3,18 @@
 {% load vk_tags %}
 
 {% block title %}
-    {{ message.text|truncatewords:3 }}
+    {{ title }}
 {% endblock %}
 
 
 {% block main_panel %}
-
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-10 stretch-card grid-margin">
                 <div class="card">
+                {% include '_inc/_paginator.html' %}
                     <div class="card-body">
-                        <p class="card-title mb-0">Got Numbers</p>
+                        <p class="card-title mb-0">{{ title }}</p>
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
@@ -28,16 +28,20 @@
                                 <tbody>
                                 {% for number in number_list %}
                                     <tr>
-                                        <td class="pl-0"><a href="{{ number.user.get_absolute_url }}">{{ number.user.first_name }}</a></td>
+                                        <td class="pl-0"><a
+                                                href="{{ number.user.get_absolute_url }}">{{ number.user.first_name }}</a>
+                                        </td>
                                         <td>
                                             <p class="mb-0">
                                             <span class="mr-2">
                                             <a href="{{ number.get_absolute_url }}">{{ number.number }}</a>
                                             </span>
-                                        </p>
+                                            </p>
                                         </td>
                                         <td class="text-muted">{{ number.created_at }}</td>
-                                        <td class="text-muted"><a href="{{ number.account.get_absolute_url }}">{{ number.account.first_name }}</a></td>
+                                        <td class="text-muted"><a
+                                                href="{{ number.account.get_absolute_url }}">{{ number.account.first_name }}</a>
+                                        </td>
                                     </tr>
                                 {% endfor %}
 

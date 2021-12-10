@@ -10,13 +10,13 @@
         <li class="nav-item {{ vk_accounts_active }}">
             <a class="nav-link" data-toggle="collapse" href="#vk_accounts" aria-controls="vk_accounts">
                 <i class="mdi mdi-account-multiple menu-icon"></i>
-                <span class="menu-title">Vk Accounts</span>
+                <span class="menu-title">Vk Controller</span>
             </a>
             <div class="collapse {{ vk_accounts_show }}" id="vk_accounts">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a class="nav-link" href="{% url 'vk_accs' %}">My Accounts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'messages' %}">All Messages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'last_messages' %}">Real Time Messages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'messages' %}">Messages</a></li>
+                    <li class="nav-item"><a style="background-color: #1f13d9" class="nav-link" href="{% url 'last_messages' %}">Real Time Messages</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'numbers' %}">Got Numbers</a></li>
                 </ul>
             </div>

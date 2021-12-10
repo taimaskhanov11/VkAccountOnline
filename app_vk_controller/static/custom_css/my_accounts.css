@@ -1,4 +1,17 @@
 
+input {
+    height:1em !important;
+    /*width: 1em !important;*/
+}
+
+/*select {*/
+/*    height:2em !important;*/
+/*    !*width: 1em !important;*!*/
+/*}*/
+
+
+
+
 .account-img {
     width: 25%;
     border-radius: 30%;
@@ -26,3 +39,4 @@
     border: 1px #000000 solid;
     box-shadow: 0 0 5px #444;
 }
+

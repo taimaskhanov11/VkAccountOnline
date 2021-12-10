@@ -22,21 +22,20 @@
 
                         <div class="card-body">
                             <div>
-                                <h2 class="card-title">
+                                <h2 style="display: inline-block" class="card-title">
 
                                     <a href="https://vk.com/id{{ account.user_id }}">
                                         <img style="width:1.1em" src="{% static 'custom_images/vk.jpeg' %}" alt="">
                                     </a>
 
-                                    <form style="display: inline-block; float: right" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="account" value="{{ account.id }}">
-                                        <button type="submit" style="display: inline-block;float: right;" type="button"
-                                                class="btn btn-{{ status.2 }} btn-sm right">
-                                            {{ status.3 }}</button>
-                                    </form>
-
                                 </h2>
+                                <form style="display: inline-block; float: right" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="account" value="{{ account.id }}">
+                                    <button type="submit" style="display: inline-block;float: right;" type="button"
+                                            class="btn btn-{{ status.2 }} btn-sm right">
+                                        {{ status.3 }}</button>
+                                </form>
                             </div>
 
                             <div style="display: block">
@@ -56,11 +55,14 @@
                             <h4 style="display: inline-block;float: right;"
                                 class="display-6">{{ account.users.count }}</h4>
 
-                            <h4 style="display: inline-block;width:50%" class="display-6">Всего сообщений</h4>
+                            <h4 style="display: inline-block;width:50%" class="display-6"><a
+                                    href="{% url 'messages_by_account' account.pk %}">Всего сообщений</a></h4>
                             <h4 style="display: inline-block;float: right"
                                 class="display-6">{{ account.messages.count }}</h4>
 
-                            <h4 style="display: inline-block;width:51%" class="display-6">Всего номеров</h4>
+                            <h4 style="display: inline-block;width:51%" class="display-6">
+                                <a href="{% url 'numbers_by_account' account.pk %}">Всего номеров</a>
+                            </h4>
                             <h4 style="display: inline-block;float: right"
                                 class="display-6">{{ account.numbers.count }}</h4>
 
