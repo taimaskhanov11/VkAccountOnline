@@ -1,0 +1,22 @@
+{% load vk_tags %}
+<div class="dropdown">
+    <button class="btn btn-danger btn-group-xs dropdown-toggle col-sm-5" type="button"
+            id="dropdownMenuSizeButton1" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+        {{ title }}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton1" style="">
+        {% get_all_accounts_and_users as accs_users %}
+        <h6 class="dropdown-header"># Аккаунты</h6>
+        {% for acc in accs_users.accounts %}
+            <a class="dropdown-item"
+               href="{% url 'messages_by_account' acc.pk %}">{{ acc.first_name }}</a>
+        {% endfor %}
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header"># Пользователи</h6>
+        {% for user in accs_users.users %}
+            <a class="dropdown-item"
+               href="{% url 'messages_by_user' user.pk %}">{{ user.first_name }}</a>
+        {% endfor %}
+    </div>
+</div>

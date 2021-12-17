@@ -10,17 +10,25 @@
 {% if page_obj.has_other_pages %}
     <div class="btn-group" role="group" aria-label="Basic example">
         {% if page_obj.has_previous %}
+            <button onclick='document.location="?{{ s }}page=1"'
+
+                    class="btn btn-primary" type="button"
+                    aria-label="Previous">
+                <span aria-hidden="true">first</span>
+            </button>
             <button onclick='document.location="?{{ s }}page={{ page_obj.previous_page_number }}"'
                     class="btn btn-primary" type="button"
                     aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
             </button>
+
+
         {% endif %}
         {#            {{ page_obj.paginator }}#}
         {% for p in paginator.page_range %}
             {% if page_obj.number == p %}
                 <button type="button" class="btn btn-outline-secondary">{{ p }}</button>
-{#                <button type="button" class="btn btn-primary inactive">{{ p }}</button>#}
+                {#                <button type="button" class="btn btn-primary inactive">{{ p }}</button>#}
             {% elif p > page_obj.number|add:-5 and p < page_obj.number|add:5 %}
                 <button onclick='document.location="?{{ s }}page={{ p }}"' type="button" class="btn btn-primary">
                     {{ p }}
@@ -32,7 +40,12 @@
                     class="btn btn-primary" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
             </button>
+            <button onclick='document.location="?{{ s }}page={{ page_obj.paginator.num_pages }}"' type="button"
+                    class="btn btn-primary" aria-label="Next">
+                <span aria-hidden="true">last</span>
+            </button>
         {% endif %}
+
 
     </div>
 

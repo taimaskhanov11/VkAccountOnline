@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load vk_tags %}
+
+{% block title %}
+    {{ user.first_name }}
+{% endblock %}
+
+
+{% block custom_plugin_css_for_this_page %}
+    {#    <link rel="stylesheet" href="{% static 'custom_css/my_accounts.css/' %}">#}
+{% endblock %}
+
+
+{% block main_panel %}
+    <div class="content-wrapper">
+        <div class="d-flex">
+            <div class="col-md-3 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">Аккаунт </p>
+                        </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">Пользователь</p>
+                        </div>
+                        <div>
+                            <p style="display: inline-block"
+                               class="text-dark mb-1">Время</p>
+                        </div>
+                        {#                        <div>#}
+                        {#                            <p style="display: inline-block"#}
+                        {#                               class="text-info mb-1">Получено от {{ message.user }}</p>#}
+                        {#                        </div>#}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-6 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    {{ form.as_p }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+{% block custom_js_for_this_page %}
+{% endblock %}

@@ -1,0 +1,51 @@
+<div class="input-group">
+    <div id="search-button" class="input-group-prepend hover-cursor">
+                                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+        <button id="button-text" class="btn btn-sm btn-outline-info dropdown-toggle" type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            Поиск по
+        </button>
+
+
+        <div class="dropdown-menu" style="">
+            <span id="fields-count" style="visibility: hidden;">{{ fields|length }}</span>
+            {% for field in fields %}
+                <a id="{{ forloop.counter }}" class="dropdown-item" class="dropdown-item" href="#">{{ field }}</a>
+            {% endfor %}
+
+            {#            <a class="dropdown-item" href="#">Another action</a>#}
+            {#            <a class="dropdown-item" href="#">Something else here</a>#}
+            {#            <div role="separator" class="dropdown-divider"></div>#}
+            {#            <a class="dropdown-item" href="#">Separated link</a>#}
+        </div>
+    </div>
+    <form id="search-form" style="display: inline" class="col-lg-7 " method="post">
+        {% csrf_token %}
+        <input id="searching-text" type="hidden" name="search_field" value="all">
+
+        <input type="search" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search"
+               aria-describedby="search" name="search">
+    </form> #todo
+
+</div>
+
+{#<div class="input-group-prepend hover-cursor" id="navbar-search-icon">#}
+{#                <span class="input-group-text" id="search">#}
+{#                  <i class="icon-search"></i>#}
+{#                </span>#}
+{#              </div>#}
+
+{#<li class="nav-item nav-search d-none d-lg-block">#}
+{#    <div class="input-group">#}
+{#        <div class="input-group-prepend hover-cursor" id="navbar-search-icon">#}
+{#                <span class="input-group-text" id="search">#}
+{#                  <i class="icon-search"></i>#}
+{#                </span>#}
+{#        </div>#}
+{#        <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search"#}
+{#               aria-describedby="search">#}
+{#    </div>#}
+{#</li>#}

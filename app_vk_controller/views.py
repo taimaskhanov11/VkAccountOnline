@@ -1,12 +1,13 @@
 from pprint import pprint
 
 from django.core import serializers
+from django.core.paginator import Paginator
 from django.http import HttpResponse, JsonResponse, Http404, HttpResponseNotFound
 from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
-from django.views.generic import TemplateView, DetailView, ListView, UpdateView
+from django.views.generic import TemplateView, DetailView, ListView, UpdateView, CreateView
 
 # from app_vk_controller.db_peewee import Account
 # from app_vk_controller.forms import AcceptCodeForm
@@ -17,7 +18,7 @@ from django.views.generic import TemplateView, DetailView, ListView, UpdateView
 # from rest_framework.mixins import ListModelMixin, CreateModelMixin
 from app_vk_controller.forms import UserForm
 from app_vk_controller.models import Account, Message, User, Number
-from app_vk_controller.service import VkAccountDataMixin
+from app_vk_controller.service import VkAccountDataMixin, MessageColumnEnum
 
 
 class HomeView(View):
@@ -105,10 +106,34 @@ class MessageDetailView(VkAccountDataMixin, DetailView):
     #                  'vk_accounts_show': 'show'}
 
 
-class MessageListView(VkAccountDataMixin, ListView):
+class MessageCreateView(VkAccountDataMixin, CreateView):
+    model = Message
+
+
+class MessageListView(ListView):
     model = Message
     paginate_by = 10
+    extra_context = {'vk_accounts_active': 'active',
+                     'vk_accounts_show': 'show',
+                     'table_fields': MessageColumnEnum.__members__
+                     }
+    # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show',
+    #                  'table_fields': [
+    #                      'Аккаунт#',
+    #                      'User',
+    #                      'Входящее',
+    #                      'Ответ',
+    #                      'Шаблон',
+    #                      'Время',
+    #                 ]
+    #                  }
+
     queryset = Message.objects.all().select_related('account', 'user')
+
+    def post(self, *args, **kwargs):
+        print(self.request.POST)
+        self.queryset()
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show'}
 
@@ -167,7 +192,7 @@ class LastMessageListView(VkAccountDataMixin, TemplateView):
 
 class VkAccountListView(VkAccountDataMixin, ListView):  # todo
     model = Account
-    template_name = 'app_vk_controller/vk_accounts.html'
+    template_name = 'app_vk_controller/vk_accounts_list.html'
 
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show'}
@@ -229,7 +254,7 @@ class VkUserDetailView(VkAccountDataMixin, DetailView, UpdateView):
 
 class VkUserListView(VkAccountDataMixin, ListView):
     model = User
-    template_name = 'app_vk_controller/vk_user_list.html'
+    template_name = 'app_vk_controller/vk_users_list.html'
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show'}
 
@@ -257,7 +282,6 @@ class NumberDetailView(VkAccountDataMixin, ListView):
 class NumberByAccountListView(VkAccountDataMixin, ListView):
     model = Number
     queryset = Number.objects.all().select_related('account', 'user')
-
 
     def get_queryset(self):
         # return Number.objects.filter(account__pk=self.kwargs['pk']).all()

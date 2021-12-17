@@ -18,6 +18,7 @@
 {% block main_panel %}
     <div class="content-wrapper">
 
+        <!-- User Main information -->
         <div class="d-flex" style="margin-left: 35%; margin-right: auto; width:60%">
             <div class="col-md-6 grid-margin">
                 <div class="card">
@@ -31,7 +32,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- User Deep information -->
         <div class="row">
+
+            <!-- Info keys -->
             <div class="col-md-3 grid-margin">
                 <div class="card">
                     <div class="card-body">
@@ -51,6 +56,7 @@
                 </div>
             </div>
 
+            <!-- Info values -->
             <div class="col-md-3 grid-margin">
                 <div class="card">
                     <div class="card-body">
@@ -128,36 +134,43 @@
                 </div>
             </div>
 
-            <!-- Третья -->
+            <!-- Buttons -->
             <div class="col-md-6 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        {#                        {{ user.first_name }}#}
-                        {#                        {{ user.last_name }}#}
-
                         <p>
-                            <button onclick="document.location.href='{% url 'messages_by_user' user.pk %}'" type="button" class="btn btn-primary btn-icon-text">
+                            <button onclick="document.location.href='{% url 'message_create' %}'"
+                                    type="button" class="btn btn-primary btn-icon-text">
+                                <i class="mdi mdi-message-processing"></i>
+                                Отправить сообщение
+                            </button>
+                        </p>
+                        <p>
+                            <button onclick="document.location.href='{% url 'messages_by_user' user.pk %}'"
+                                    type="button" class="btn btn-primary btn-icon-text">
                                 <i class="mdi mdi-message-processing"></i>
                                 Показать все сообщения
-
+                            </button>
+                        </p>
+                        <p>
+                            <button id="send-form-button" type="button"
+                                    class="btn btn-primary btn-icon-text">
+                                <i class="ti-file btn-icon-prepend"></i>
+                                Сохранить изменения
                             </button>
                         </p>
 
-                        <button id="send-form-button" type="button"
-                                class="btn btn-primary btn-icon-text">
-                            <i class="ti-file btn-icon-prepend"></i>
-                            Сохранить изменения
-                        </button>
 
+                        <!-- Saves status -->
                         <p class="text-success">{{ status_succes }}</p>
 
+                        <!-- Error info -->
                         {% for field, errors in form.errors.items %}
                             {% for error in errors %}
                                 <p class="text-danger">{{ field }} :: {{ error }}</p>
                             {% endfor %}
                         {% endfor %}
-                        {#                        {% for error in errors %}#}
-                        {#                        {{ form.as_p }}#}
+
                     </div>
                 </div>
             </div>

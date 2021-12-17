@@ -66,6 +66,31 @@ class Number(models.Model):
         return reverse('number_detail', kwargs={'pk': self.pk})
 
 
+class Message(models.Model):
+    user = models.ForeignKey(User, related_name='messages', on_delete=models.CASCADE)
+    account = models.ForeignKey(Account, related_name='messages', on_delete=models.CASCADE)
+    sent_at = models.DateTimeField('получен')
+    text = models.TextField('текст')
+    answer_question = models.TextField('ответ')
+    answer_template = models.TextField('шаблон')
+
+    class Meta:
+        ordering = ['-id']
+
+    def __str__(self):
+        return self.text
+
+    def get_absolute_url(self):
+        return reverse('message_detail', kwargs={'pk': self.pk})
+
+
+class SendMessage(models.Model):
+    user = models.ForeignKey(User, related_name='sended_messages', on_delete=models.CASCADE)
+    account = models.ForeignKey(Account, related_name='sended_messages', on_delete=models.CASCADE)
+    sent_at = models.DateTimeField('получен')
+    text = models.TextField('текст')
+
+
 class Category(models.Model):
     title = models.CharField('название', max_length=255, unique=True, db_index=True)
     created_at = models.DateTimeField('дата создания', auto_now_add=True)
@@ -96,21 +121,3 @@ class Output(models.Model):
 
     class Meta:
         ordering = ['-id']
-
-
-class Message(models.Model):
-    user = models.ForeignKey(User, related_name='messages', on_delete=models.CASCADE)
-    account = models.ForeignKey(Account, related_name='messages', on_delete=models.CASCADE)
-    sent_at = models.DateTimeField('получен')
-    text = models.TextField('текст')
-    answer_question = models.TextField('ответ')
-    answer_template = models.TextField('шаблон')
-
-    class Meta:
-        ordering = ['-id']
-
-    def __str__(self):
-        return self.text
-
-    def get_absolute_url(self):
-        return reverse('message_detail', kwargs={'pk': self.pk})

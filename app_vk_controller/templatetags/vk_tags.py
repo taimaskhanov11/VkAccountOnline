@@ -42,9 +42,9 @@ def get_status(obj):
             return 'warning', 'Stopped', 'success', 'Активировать',
     elif isinstance(obj, User):
         if obj.blocked:
-            return 'danger', 'Blocked', 'success', 'Active'
+            return 'danger', 'Blocked', 'success', 'Разблокировать'
         else:
-            return 'success', 'Active', 'danger', 'Blocked'
+            return 'success', 'Active', 'danger', 'Заблокировать'
 
 
 @register.simple_tag
