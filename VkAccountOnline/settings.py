@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-+j4r#7_=6(@7l8%lmm16em^zm4%%56f)%i^$*3^nzb^t=a-4o!
 DEBUG = True
 if DEBUG:
     import mimetypes
+
     mimetypes.add_type("application/javascript", ".js", True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'drf_yasg',
     'django_filters',
     'debug_toolbar',
     'app_vk_controller.apps.AppVkControllerConfig',
@@ -108,10 +110,15 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_db',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
+        # 'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        # 'NAME': os.environ.get('POSTGRES_NAME'),
+        # 'USER': os.environ.get('POSTGRES_USER'),
+        # 'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -177,7 +184,9 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+
+
 
     # 'DEFAULT_PERMISSION_CLASSES': [
     # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'

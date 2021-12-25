@@ -17,10 +17,19 @@
             <div class="col-11">
 
                 <!-- Paginator -->
-                <div style="display: block">
-                    {% include '_inc/_paginator.html' %}</div>
-                <br>
+                <div style="display: inline-block">
+                    {% include '_inc/_paginator.html' %}
+                </div>
+
+
+                <!-- Message new -->
+                <button onclick=document.location.href='{% url 'message_new' %}' type="button"
+                        class="btn btn-dark col-4 btn-large float-right">Создать новое сообщение
+                </button>
+
+
                 <!-- Message choice -->
+                <br><br>
                 {% include 'app_vk_controller/_inc/_message_dropdown.html' %}
 
                 <!-- Search -->
@@ -85,6 +94,7 @@
                                 <tbody>
 
                                 {% for message in message_list %}
+
                                     <tr class="even">
                                         <td>
                                             <a href="{{ message.account.get_absolute_url }}">{{ message.account.first_name }}</a>
@@ -95,12 +105,13 @@
                                         <td>
                                             <a href="{{ message.get_absolute_url }}">{{ message.text|truncatechars:18 }}</a>
                                         </td>
-                                        <td>{{ message.answer_question|truncatechars:20 }}"</td>
-                                        <td>{{ message.answer_template|truncatechars:20 }}"</td>
+                                        <td>{{ message.answer_question|truncatechars:20 }}</td>
+                                        <td>{{ message.answer_template|truncatechars:20 }}</td>
                                         {#                                            <td>In progress</td>#}
                                         <td>{{ message.sent_at|date:'Y-m-d H:i' }}</td>
                                         {#                                            <td></td>#}
                                     </tr>
+
                                     {#                                        <tr class="even">#}
                                     {#                                            <td class=" select-checkbox">Incs234</td>#}
                                     {#                                            <td class="sorting_1">Car insurance</td>#}
@@ -113,10 +124,13 @@
                                     {#                                        </tr>#}
 
                                 {% endfor %}
-
                                 </tbody>
                             </table>
-
+                            {% if not message_list %}
+                                <h2 class="display-5" style="display: inline-block">
+                                    Ничего не найдено <a href="{% url 'message_list' %}">Вернутся</a>
+                                </h2>
+                            {% endif %}
                         </div>
                     </div>
 

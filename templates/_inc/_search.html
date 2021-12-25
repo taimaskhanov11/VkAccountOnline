@@ -6,7 +6,7 @@
         <button id="button-text" class="btn btn-sm btn-outline-info dropdown-toggle" type="button"
                 data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-            Поиск по
+            Text
         </button>
 
 
@@ -22,11 +22,11 @@
             {#            <a class="dropdown-item" href="#">Separated link</a>#}
         </div>
     </div>
-    <form id="search-form" style="display: inline" class="col-lg-7 " method="post">
-        {% csrf_token %}
-        <input id="searching-text" type="hidden" name="search_field" value="all">
+    <form id="search-form" style="display: inline" class="col-lg-7 " method="get">
+{#        {% csrf_token %}#}
+        <input id="searching-text" type="hidden" name="search_field" value=3>
 
-        <input type="search" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search"
+        <input type="search" class="form-control" id="navbar-search-input" placeholder="Поиск" aria-label="search"
                aria-describedby="search" name="search">
     </form> #todo
 

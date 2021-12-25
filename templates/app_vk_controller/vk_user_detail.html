@@ -139,14 +139,14 @@
                 <div class="card">
                     <div class="card-body">
                         <p>
-                            <button onclick="document.location.href='{% url 'message_create' %}'"
+                            <button onclick="document.location.href='{% url 'message_new' %}'"
                                     type="button" class="btn btn-primary btn-icon-text">
                                 <i class="mdi mdi-message-processing"></i>
                                 Отправить сообщение
                             </button>
                         </p>
                         <p>
-                            <button onclick="document.location.href='{% url 'messages_by_user' user.pk %}'"
+                            <button onclick="document.location.href='{% url 'message_list' %}?search_field=11&search={{ user.pk }}'"
                                     type="button" class="btn btn-primary btn-icon-text">
                                 <i class="mdi mdi-message-processing"></i>
                                 Показать все сообщения

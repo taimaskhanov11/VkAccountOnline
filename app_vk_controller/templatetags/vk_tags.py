@@ -1,3 +1,4 @@
+import datetime
 from pprint import pprint
 
 from django import template
@@ -33,7 +34,6 @@ def show_last_messages():  # old
 @register.simple_tag
 def get_status(obj):
     if isinstance(obj, Account):
-        print(obj)
         if obj.blocked:
             return 'danger', 'Blocked'
         elif obj.start_status:
@@ -55,6 +55,12 @@ def get_all_accounts_and_users():
     }
 
     return context
+
+@register.simple_tag
+def get_now_time():
+    return datetime.datetime.now()
+
+
 
 
 @register.inclusion_tag('app_vk_controller/template_tags/accounts_info.html')

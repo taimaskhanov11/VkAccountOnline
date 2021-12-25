@@ -1,3 +1,5 @@
 .idea
 a_trash
 node_modules
+data
+*.log

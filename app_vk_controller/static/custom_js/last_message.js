@@ -243,7 +243,6 @@ function loadingIcon() {
 document.addEventListener('DOMContentLoaded', function () {
     loadingButton();
     doStuff();
-
 })
 
 let intR;

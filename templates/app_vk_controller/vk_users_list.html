@@ -12,9 +12,19 @@
 
 {% block main_panel %}
     <div class="content-wrapper">
+
+
         <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <span style="margin-left: 45%; margin-right: auto; width:60%">Пользователи</span>
+                    </div>
+                </div>
+                <br>
+            </div>
+
             {% for user in user_list %}
-                {% get_status user as status %}
 
                 <div class="col-md-4 grid-margin stretch-card">
                     <div class="card">
@@ -29,8 +39,10 @@
 
                                 </h2>
                                 <form style="display: inline-block; float: right" method="post">
+                                    {% get_status user as status %}
+
                                     {% csrf_token %}
-                                    <input type="hidden" name="account" value="{{ account.id }}">
+                                    <input type="hidden" name="user" value="{{ user.id }}">
                                     <button type="submit" style="display: inline-block;float: right;" type="button"
                                             class="btn btn-{{ status.2 }} btn-sm right">
                                         {{ status.3 }}</button>
@@ -50,7 +62,8 @@
                             <br>
 
                             <h4 style="display: inline-block;width:50%" class="display-6"><a
-                                    href="{% url 'messages_by_user' user.pk %}">Всего сообщений</a></h4>
+                                    href="{% url 'message_list' %}?search_field=11&search={{ user.pk }}">Всего
+                                сообщений</a></h4>
                             <h4 style="display: inline-block;float: right"
                                 class="display-6">{{ user.messages.count }}</h4>
 
@@ -80,7 +93,7 @@
                                         <span style="font-size: 0.8em;" class="text-right">
                                             {{ user.first_name }}
                                         </span>
-                                                                                                                                 alt="">
+                                        alt="">
                                     </button>
                                 </a>
                             {% endfor %}

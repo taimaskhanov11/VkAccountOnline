@@ -13,9 +13,16 @@
 {% block main_panel %}
     <div class="content-wrapper">
         <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <span style="margin-left: 45%; margin-right: auto; width:60%">Аккаунты</span>
+                    </div>
+                </div>
+                <br>
+            </div>
 
             {% for account in account_list %}
-                {% get_status account as status %}
 
                 <div class="col-md-4 grid-margin stretch-card">
                     <div class="card">
@@ -30,6 +37,7 @@
 
                                 </h2>
                                 <form style="display: inline-block; float: right" method="post">
+                                    {% get_status account as status %}
                                     {% csrf_token %}
                                     <input type="hidden" name="account" value="{{ account.id }}">
                                     <button type="submit" style="display: inline-block;float: right;" type="button"
@@ -56,12 +64,13 @@
                                 class="display-6">{{ account.users.count }}</h4>
 
                             <h4 style="display: inline-block;width:50%" class="display-6"><a
-                                    href="{% url 'messages_by_account' account.pk %}">Всего сообщений</a></h4>
+                                    href="{% url 'message_list' %}?search_field=10&search={{ account.pk }}">Всего
+                                сообщений</a></h4>
                             <h4 style="display: inline-block;float: right"
                                 class="display-6">{{ account.messages.count }}</h4>
 
                             <h4 style="display: inline-block;width:51%" class="display-6">
-                                <a href="{% url 'numbers_by_account' account.pk %}">Всего номеров</a>
+                                <a href={% url 'numbers' %}?search_field=10&search={{ account.pk }}>Всего номеров</a>
                             </h4>
                             <h4 style="display: inline-block;float: right"
                                 class="display-6">{{ account.numbers.count }}</h4>

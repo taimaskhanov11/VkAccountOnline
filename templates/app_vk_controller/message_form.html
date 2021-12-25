@@ -15,35 +15,37 @@
 {% block main_panel %}
     <div class="content-wrapper">
         <div class="d-flex">
-            <div class="col-md-3 grid-margin">
-                <div class="card">
-                    <div class="card-body">
-                        <div>
-                            <p style="display: inline-block"
-                               class="text-dark mb-1">Аккаунт </p>
-                        </div>
-                        <div>
-                            <p style="display: inline-block"
-                               class="text-dark mb-1">Пользователь</p>
-                        </div>
-                        <div>
-                            <p style="display: inline-block"
-                               class="text-dark mb-1">Время</p>
-                        </div>
+{#            <div class="col-md-3 grid-margin">#}
+{#                <div class="card">#}
+{#                    <div class="card-body">#}
+{#                        <div>#}
+{#                            <p style="display: inline-block"#}
+{#                               class="text-dark mb-1">Аккаунт </p>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <p style="display: inline-block"#}
+{#                               class="text-dark mb-1">Пользователь</p>#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <p style="display: inline-block"#}
+{#                               class="text-dark mb-1">Время</p>#}
+{#                        </div>#}
                         {#                        <div>#}
                         {#                            <p style="display: inline-block"#}
                         {#                               class="text-info mb-1">Получено от {{ message.user }}</p>#}
                         {#                        </div>#}
-                    </div>
-                </div>
-            </div>
-
-
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
         </div>
         <div class="col-md-6 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    {{ form.as_p }}
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-success btn-md col-12">Отправить</button>
+                    </form>
                 </div>
             </div>
         </div>

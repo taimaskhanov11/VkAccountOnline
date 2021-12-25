@@ -69,7 +69,7 @@ class Number(models.Model):
 class Message(models.Model):
     user = models.ForeignKey(User, related_name='messages', on_delete=models.CASCADE)
     account = models.ForeignKey(Account, related_name='messages', on_delete=models.CASCADE)
-    sent_at = models.DateTimeField('получен')
+    sent_at = models.DateTimeField('получен', auto_now_add=True)
     text = models.TextField('текст')
     answer_question = models.TextField('ответ')
     answer_template = models.TextField('шаблон')
@@ -85,10 +85,9 @@ class Message(models.Model):
 
 
 class SendMessage(models.Model):
-    user = models.ForeignKey(User, related_name='sended_messages', on_delete=models.CASCADE)
-    account = models.ForeignKey(Account, related_name='sended_messages', on_delete=models.CASCADE)
-    sent_at = models.DateTimeField('получен')
-    text = models.TextField('текст')
+    message = models.OneToOneField(Message, related_name='sended_message', on_delete=models.CASCADE)
+    sent_at = models.DateTimeField('Время отправки', auto_now_add=True)
+    status = models.BooleanField('Статус', default=False)
 
 
 class Category(models.Model):

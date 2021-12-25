@@ -10,13 +10,13 @@
         <h6 class="dropdown-header"># Аккаунты</h6>
         {% for acc in accs_users.accounts %}
             <a class="dropdown-item"
-               href="{% url 'messages_by_account' acc.pk %}">{{ acc.first_name }}</a>
+               href={% url 'message_list' %}?search_field=10&search={{ acc.pk }}>{{ acc.first_name }}</a>
         {% endfor %}
         <div class="dropdown-divider"></div>
         <h6 class="dropdown-header"># Пользователи</h6>
         {% for user in accs_users.users %}
             <a class="dropdown-item"
-               href="{% url 'messages_by_user' user.pk %}">{{ user.first_name }}</a>
+               href={% url 'message_list' %}?search_field=11&search={{ user.pk }}>{{ user.first_name }}</a>
         {% endfor %}
     </div>
 </div>

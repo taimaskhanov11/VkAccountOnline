@@ -16,8 +16,8 @@ from django.views.generic import TemplateView, DetailView, ListView, UpdateView,
 # from rest_framework import status
 # from rest_framework.generics import GenericAPIView
 # from rest_framework.mixins import ListModelMixin, CreateModelMixin
-from app_vk_controller.forms import UserForm
-from app_vk_controller.models import Account, Message, User, Number
+from app_vk_controller.forms import UserForm, MessageForm
+from app_vk_controller.models import Account, Message, User, Number, SendMessage
 from app_vk_controller.service import VkAccountDataMixin, MessageColumnEnum
 
 
@@ -108,45 +108,118 @@ class MessageDetailView(VkAccountDataMixin, DetailView):
 
 class MessageCreateView(VkAccountDataMixin, CreateView):
     model = Message
+    form_class = MessageForm
+
+    # fields = ['text', 'account', 'user']
+
+    # initial = {
+    # }
+    # def get(self, request, *args, **kwargs):
+    #     get = super().get(request, *args, **kwargs)
+    #     return get
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        SendMessage.objects.create(message=self.object)
+        return response
+
+    # def get_initial(self):
+    #     user = self.request.GET.get('user')
+    #     account = self.request.GET.get('account', )
+    #     if account and user:
+    #         print('asdsa')
+    #
+    #         return {
+    #             'account': account,
+    #             'user': user,
+    #         }
+    #     else:
+    #         super().get_initial()
 
 
-class MessageListView(ListView):
+class MessageListView(VkAccountDataMixin, ListView):
     model = Message
     paginate_by = 10
-    extra_context = {'vk_accounts_active': 'active',
-                     'vk_accounts_show': 'show',
-                     'table_fields': MessageColumnEnum.__members__
-                     }
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show',
-    #                  'table_fields': [
-    #                      'Аккаунт#',
-    #                      'User',
-    #                      'Входящее',
-    #                      'Ответ',
-    #                      'Шаблон',
-    #                      'Время',
-    #                 ]
+    #                  'table_fields': enum._member_names_
     #                  }
-
+    # search = None
     queryset = Message.objects.all().select_related('account', 'user')
 
-    def post(self, *args, **kwargs):
-        print(self.request.POST)
-        self.queryset()
-    # extra_context = {'vk_accounts_active': 'active',
-    #                  'vk_accounts_show': 'show'}
+    def get_queryset(self):
+        search_field = self.request.GET.get('search_field')
+        search = self.request.GET.get('search')
+        if search_field and search:
+            return self.searching(search_field, search)
+        else:
+            return super().get_queryset()
 
-    # def get_queryset(self):
-    #     # queryset = super().get_queryset()
-    #     queryset =
-    #     # queryset.select_related('account','user')
-    #     return queryset
+        # res = self.search or super().get_queryset(search_field)
+        # print(self.search)
+        # return res
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Все сообщения'
+        search_field = self.request.GET.get('search_field', '')
+        search = self.request.GET.get('search', '')
+
+        context['s'] = f"search_field={search_field}&search={search}&"
+        context['title'] = f'Поле {self.column_enum(int(search_field)).name} поиск:' \
+                           f' {search}' if search_field else 'Все сообщения'
         return context
+
+    def searching(self, field, search):
+        field = MessageColumnEnum(int(field))
+        res = self.queryset
+        match field:
+            case self.column_enum.Account_ID:
+                res = self.queryset.filter(account=search)
+            case self.column_enum.User_ID:
+                res = self.queryset.filter(user=search)
+
+            case self.column_enum.Text:
+                res = self.queryset.filter(text__icontains=search)
+            case self.column_enum.Template:
+                res = self.queryset.filter(answer_template__icontains=search)
+            case self.column_enum.Answer:
+                res = self.queryset.filter(answer_question__icontains=search)
+            case self.column_enum.User:
+                res = self.queryset.filter(user__first_name__icontains=search)
+            case self.column_enum.Account:
+                res = self.queryset.filter(account__first_name__icontains=search)
+            case self.column_enum.Date:
+                res = self.queryset.filter(sent_at__icontains=search)
+        return res
+        # extra_context = {'vk_accounts_active': 'active',
+    #                  'vk_accounts_show': 'show'}
+
+    # def get(self, request, *args, **kwargs):
+    #     get = super().get(request, *args, **kwargs)
+    #     print(self.request.GET, 'GET')
+    #     return get
+
+    # def post(self, request, *args, **kwargs):
+    #     print(self.request.POST, 'POST')
+    #     search_field = self.request.POST.get('search_field')
+    #     search = self.request.POST.get('search')
+    #     print(search_field)
+    #     print(self.enum._value2member_map_)
+    #     if int(search_field) in self.enum._value2member_map_:
+    #         self.search = self.searching(search_field, search)
+    #         print(self.search)
+    #     # self.object_list = self.search
+    #     # context = self.get_context_data()
+    #
+    #     # self.object_list = self.get_queryset()
+    #     # allow_empty = self.get_allow_empty()
+    #     # return self.get(request, *args, **kwargs)
+    #     # context['s'] = f"{self.request.POST.get('search')}&{self.request.POST.get('search_field')}&"
+    #     # context['s'] = f"{self.request.POST.get('search')}&"
+    #     # self.get()
+    #     # print(context)
+    #     return self.get(request, *args, **kwargs)
+    #     # return render(request, 'app_vk_controller/message_list.html', context)
 
 
 class MessageByUserListView(VkAccountDataMixin, ListView):
@@ -199,8 +272,8 @@ class VkAccountListView(VkAccountDataMixin, ListView):  # todo
 
     def post(self, request, *args, **kwargs):
         pk = request.POST.get('account')
-        print(request.POST)
-        account = Account.objects.get(pk=int(pk))
+        # print(request.POST)
+        account = Account.objects.get(pk=pk)
         if account.start_status:
             account.start_status = False
         else:
@@ -255,20 +328,48 @@ class VkUserDetailView(VkAccountDataMixin, DetailView, UpdateView):
 class VkUserListView(VkAccountDataMixin, ListView):
     model = User
     template_name = 'app_vk_controller/vk_users_list.html'
+
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show'}
+
+    def post(self, request, *args, **kwargs):
+        pk = request.POST.get('user')
+        print(request.POST)
+        user = User.objects.get(pk=pk)
+        if user.blocked:
+            user.blocked = False
+        else:
+            user.blocked = True
+        user.save()
+        return self.get(request, *args, **kwargs)
 
 
 class NumberListView(VkAccountDataMixin, ListView):
     model = Number
+    queryset = Number.objects.all().select_related('account', 'user')
 
     # template_name = 'app_vk_controller/number_detail.html'
 
     # extra_context = {'vk_accounts_active': 'active',
     #                  'vk_accounts_show': 'show'}
-    def get_context_data(self, **kwargs):
+
+    def get_queryset(self):
+        search_field = self.request.GET.get('search_field')
+        search = self.request.GET.get('search')
+        if search_field and search:
+            if MessageColumnEnum(int(search_field)) == self.column_enum.Account_ID:
+                return self.queryset.filter(account=search)
+        else:
+            return super().get_queryset()
+
+    def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = f'All Got All Numbers'
+        search_field = self.request.GET.get('search_field', '')
+        search = self.request.GET.get('search', '')
+
+        context['s'] = f"search_field={search_field}&search={search}&"
+        context['title'] = f'Поле {self.column_enum(int(search_field)).name} поиск:' \
+                           f' {search}' if search_field else 'Все номера'
         return context
 
 
