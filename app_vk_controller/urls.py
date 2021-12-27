@@ -13,6 +13,7 @@ router.register('messages', MessageViewSet)
 urlpatterns = [
 
     path('', views.HomeView.as_view(), name='home'),
+
     path('api/', include(router.urls)),
 
     path('vk-accs/', views.VkAccountListView.as_view(), name='vk_accs'),

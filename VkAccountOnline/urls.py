@@ -42,6 +42,7 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 
     path('', include('app_vk_controller.urls')),
+    path('', include('app_answer.urls')),
     path('', include('app_accounts.urls')),
 
     path('__debug__/', include(debug_toolbar.urls)),

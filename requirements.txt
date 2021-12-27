@@ -1,7 +1,6 @@
 aiohttp~=3.8.1
 aiosignal~=1.2.0
 amqp~=5.0.7
-anyjson~=0.3.3
 asgiref~=3.4.1
 async-timeout~=4.0.1
 attrs~=21.2.0
@@ -46,7 +45,6 @@ prompt-toolkit~=3.0.24
 psycopg~=3.0.7
 psycopg-binary~=3.0.7
 psycopg-pool~=3.0.2
-psycopg2~=2.9.2
 psycopg2-binary~=2.9.2
 pyowm~=3.2.0
 pyparsing~=3.0.6

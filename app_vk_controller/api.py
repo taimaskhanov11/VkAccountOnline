@@ -4,7 +4,7 @@ from django.contrib.auth import models
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Account, User, Category, Input, Output, Message, Number
+from .models import Account, User, Message, Number
 
 from .serializers import AccountSerializer, UserSerializer, MessageSerializer, NumberSerializer
 
@@ -17,8 +17,6 @@ class AccountViewSet(viewsets.ModelViewSet):
     filterset_fields = '__all__'
     search_fields = '__all__'
     ordering_fields = '__all__'
-
-
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -34,7 +32,6 @@ class UserViewSet(viewsets.ModelViewSet):
     ordering_fields = '__all__'
 
 
-
 class MessageViewSet(viewsets.ModelViewSet):  # todo убрал all
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
@@ -43,6 +40,7 @@ class MessageViewSet(viewsets.ModelViewSet):  # todo убрал all
     # search_fields = '__all__'
     search_fields = ["answer_question", "answer_template", "id", "sent_at", "text", ]
     ordering_fields = '__all__'
+
 
 class NumberViewSet(viewsets.ModelViewSet):
     queryset = Number.objects.all()
@@ -60,7 +58,3 @@ class CustomSearchFilter(filters.SearchFilter):  # OLD #todo
         if request.query_params.get('title_only'):
             return ['title']
         return super().get_search_fields(view, request)
-
-
-
-

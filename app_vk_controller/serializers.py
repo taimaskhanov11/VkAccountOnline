@@ -1,6 +1,6 @@
 from django.contrib.auth import models
 from rest_framework import serializers
-from .models import Account, User, Category, Input, Output, Message, Number
+from .models import Account, User, Message, Number
 
 
 # class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -18,22 +18,7 @@ class AccountSerializer(serializers.ModelSerializer, ):
         # fields = ['id', 'first_name', 'last_name']
 
 
-class CategorySerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Category
-        fields = '__all__'
 
-
-class InputSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Input
-        fields = '__all__'
-
-
-class OutputSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Output
-        fields = '__all__'
 
 
 # class MessageSerializer(serializers.HyperlinkedModelSerializer):

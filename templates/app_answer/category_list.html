@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ account.name }}
+{% endblock %}
+
+
+{% block custom_plugin_css_for_this_page %}
+{% endblock %}
+
+{% block main_panel %}
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <span style="margin-left: 45%; margin-right: auto; width:60%">Логика</span>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+            <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+
+                    <div class="card-body">
+                        <ul style="font-size:1em" class="list-arrow">
+                            {% for category in category_list %}
+                                <li id="cat-{{ category.id }}">{{ category.title }}</li>
+                                <ul id="cat-{{ category.id }}-child" style="display: None;font-size:1em">
+                                    <span class="text-success">ВХОД</span>
+                                    {% for input in category.inputs.all %}
+                                        <li class="text-success">{{ input.text }}</li>
+                                    {% endfor %}
+                                    <div>
+                                        <label>
+                                            <input style="height:1em" class="form-control small" type="text">
+                                        </label>
+                                    </div>
+                                    <span class="text-info">ВЫХОД</span>
+                                    {% for output in category.outputs.all %}
+                                        <li class="text-info">{{ output.text }}</li>
+                                    {% endfor %}
+                                    <div>
+                                        <label>
+                                            <input style="height:1em" class="form-control small" type="text">
+                                        </label>
+                                    </div>
+                                </ul>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                           {% for text, data in info.items %}
+                               <p> <span class=" text-warning">
+                                    {{ text }} | </span>
+                                    <span class=" text-info">{{ data.0 }}</span>
+                                    | {{ data.1 }}</p>
+                           {% endfor %}
+                           
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js_for_this_page %}
+    <script src="{% static 'custom_js/category_list.js' %}"></script> #todo
+    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+{% endblock %}

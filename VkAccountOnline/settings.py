@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_filters',
     'debug_toolbar',
     'app_vk_controller.apps.AppVkControllerConfig',
+    'app_answer.apps.AppAnswerConfig',
 
 ]
 

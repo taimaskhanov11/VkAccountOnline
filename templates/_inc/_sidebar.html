@@ -25,6 +25,17 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item {{ ai_logic_active }}" >
+            <a class="nav-link" data-toggle="collapse" href="#ai_logic" aria-controls="vk_accounts">
+                <i class="mdi mdi-android menu-icon"></i>
+                <span class="menu-title">AI Logic</span>
+            </a>
+            <div class="collapse {{ ai_logic_show }}" id="ai_logic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'answer' %}">Логика</a></li>
+                </ul>
+            </div>
+        </li>
 
 
         <li class="nav-item {{ ui_elements_active }}">
