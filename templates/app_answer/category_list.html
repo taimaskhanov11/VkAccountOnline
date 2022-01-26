@@ -7,6 +7,8 @@
 
 
 {% block custom_plugin_css_for_this_page %}
+    <link rel="stylesheet" href="{% static 'custom_css/category_list.css' %}">
+
 {% endblock %}
 
 {% block main_panel %}
@@ -22,32 +24,70 @@
             </div>
 
 
-            <div class="col-md-8 grid-margin stretch-card">
+            <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
 
                     <div class="card-body">
                         <ul style="font-size:1em" class="list-arrow">
                             {% for category in category_list %}
+
                                 <li id="cat-{{ category.id }}">{{ category.title }}</li>
                                 <ul id="cat-{{ category.id }}-child" style="display: None;font-size:1em">
+
                                     <span class="text-success">ВХОД</span>
                                     {% for input in category.inputs.all %}
-                                        <li class="text-success">{{ input.text }}</li>
+                                        {#                                        <li class="text-success">{{ input.text }}</li>#}
+                                        {#                                        <li class="text-success">#}
+                                        <form method="post">
+                                            <label>
+                                                <input id="form-input-{{ category.pk }}-{{ input.pk }}"
+                                                       class="form-control li-input"
+                                                       name="{{ category.pk }}{{ input.pk }}"
+                                                       value="{{ input.text }}"
+                                                       type="text">
+                                            </label>
+                                            <button id="btn-input-{{ category.pk }}-{{ input.pk }}" type="button"
+                                                    class="btn btn-outline-secondary btn-sm btn-icon">
+                                                <i class="mdi mdi-check text-danger"></i>
+                                            </button>
+                                        </form>
+                                        {#                                        </li>#}
                                     {% endfor %}
-                                    <div>
-                                        <label>
-                                            <input style="height:1em" class="form-control small" type="text">
-                                        </label>
-                                    </div>
+                                    {#                                    <div>#}
+                                    {#                                        <input class="form-control li-input" type="text">#}
+                                    {#                                    </div>#}
+                                    <br>
                                     <span class="text-info">ВЫХОД</span>
                                     {% for output in category.outputs.all %}
-                                        <li class="text-info">{{ output.text }}</li>
+                                        {#                                        <li class="text-info">{{ output.text }}</li>#}
+                                        {#                                        <li class="text-info">{{ output.text }}</li>#}
+                                        {#                                        <li class="text-info">#}
+                                        <form method="post">
+                                            <label for="exampleTextarea1"></label>
+                                            <div class="form-group">
+                                                <textarea id="form-output-{{ category.pk }}-{{ output.pk }}"
+                                                          style="width:80%;display: inline-block" class="form-control"
+                                                          id="exampleTextarea1"
+                                                          cols="1"
+                                                          name="{{ category.pk }}{{ output.pk }}"
+                                                          rows="3">{{ output.text }}</textarea>
+
+                                                <button id="btn-output-{{ category.pk }}-{{ output.pk }}" type="button"
+                                                        class="btn btn-outline-secondary btn-rounded btn-icon">
+                                                    <i class="mdi mdi-check text-danger"></i>
+                                                </button>
+                                            </div>
+
+
+                                        </form>
+                                        {#                                        </li>#}
+
                                     {% endfor %}
-                                    <div>
-                                        <label>
-                                            <input style="height:1em" class="form-control small" type="text">
-                                        </label>
-                                    </div>
+
+                                    {#                                    <div>#}
+                                    {#                                        <input class="form-control li-input" type="text">#}
+                                    {#                                    </div>#}
+
                                 </ul>
 
                             {% endfor %}
@@ -56,16 +96,23 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-2 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                           {% for text, data in info.items %}
-                               <p> <span class=" text-warning">
+                        {% for text, data in info.items %}
+                            <p> <span class=" text-warning">
                                     {{ text }} | </span>
-                                    <span class=" text-info">{{ data.0 }}</span>
-                                    | {{ data.1 }}</p>
-                           {% endfor %}
-                           
+                                <span class=" text-info">{{ data.0 }}</span>
+                                | {{ data.1 }}</p>
+                        {% endfor %}
+
                     </div>
                 </div>
 
@@ -78,6 +125,20 @@
 {% endblock %}
 
 {% block custom_js_for_this_page %}
-    <script src="{% static 'custom_js/category_list.js' %}"></script> #todo
-    {#    <script src="{% static 'custom_js/menu.js' %}"></script> #todo#}
+    <script type="text/javascript">
+        for (let i = 1; i <= {{category_list.count }}; i++) {
+            let cat = `#cat-${i}`
+            let child = `#cat-${i}-child`
+            $(cat).click(function () {
+                $(child).toggle()
+            })
+        }
+    </script>
+                                                <!-- script -->
+                                            <script>
+
+
+                                            </script>
+
+    <script src="{% static 'custom_js/category_list.js' %}"></script> #todo пока использутеся прямо в шаблоне
 {% endblock %}

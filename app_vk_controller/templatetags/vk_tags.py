@@ -4,7 +4,6 @@ from pprint import pprint
 from django import template
 from django.urls import reverse
 
-from app_vk_controller import db_peewee
 from app_vk_controller.models import User, Account
 from app_vk_controller.utils import get_weather_bar
 
@@ -20,15 +19,6 @@ def show_weather(request):
         'city': 'Махачкала',
         'country': 'Дагестан',
     }
-
-
-@register.inclusion_tag('app_vk_controller/template_tags/last_message_info.html')
-def show_last_messages():  # old
-    # return
-    context = {'data': db_peewee.Account.get_main_data()}
-    # context = {}
-    print(context)
-    return context
 
 
 @register.simple_tag
@@ -56,11 +46,10 @@ def get_all_accounts_and_users():
 
     return context
 
+
 @register.simple_tag
 def get_now_time():
     return datetime.datetime.now()
-
-
 
 
 @register.inclusion_tag('app_vk_controller/template_tags/accounts_info.html')

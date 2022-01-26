@@ -118,6 +118,10 @@ class MessageCreateView(VkAccountDataMixin, CreateView):
     #     get = super().get(request, *args, **kwargs)
     #     return get
 
+    def post(self, request, *args, **kwargs):
+        # print(request.POST)
+        return super().post(request, *args, **kwargs)
+
     def form_valid(self, form):
         response = super().form_valid(form)
         SendMessage.objects.create(message=self.object)

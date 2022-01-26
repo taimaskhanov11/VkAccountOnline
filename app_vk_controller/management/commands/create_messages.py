@@ -11,7 +11,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         account = Account.objects.get(id=1)
-        user = User.objects.get(id=1)
+        user = User.objects.get(id=128)
         messages = [Message(account=account,
                             user=user,
                             text=str(i),

@@ -18,9 +18,6 @@ class AccountSerializer(serializers.ModelSerializer, ):
         # fields = ['id', 'first_name', 'last_name']
 
 
-
-
-
 # class MessageSerializer(serializers.HyperlinkedModelSerializer):
 class MessageSerializer(serializers.ModelSerializer, ):
     account = AccountSerializer()

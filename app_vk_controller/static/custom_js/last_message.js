@@ -102,7 +102,7 @@ function createMessageElement(message_data) {
     let a4 = document.createElement('a')
     span3.appendChild(txt4);
 
-    a4.setAttribute('href', `/messages/${message_data['id']}`)
+    a4.setAttribute('href', `/message/${message_data['id']}`)
     a4.appendChild(span3)
     td3.appendChild(a4);
     tr.appendChild(td3);

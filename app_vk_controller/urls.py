@@ -2,16 +2,20 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from rest_framework import routers
 
+from app_answer.api import CategoryViewSet, InputViewSet, OutputViewSet
 from app_vk_controller import views
 from app_vk_controller.api import AccountViewSet, UserViewSet, MessageViewSet
 
 router = routers.DefaultRouter()
+
 router.register('accounts', AccountViewSet)
 router.register('users', UserViewSet)
 router.register('messages', MessageViewSet)
+router.register('categorys', CategoryViewSet)
+router.register('inputs', InputViewSet)
+router.register('outputs', OutputViewSet)
 
 urlpatterns = [
-
     path('', views.HomeView.as_view(), name='home'),
 
     path('api/', include(router.urls)),
@@ -32,8 +36,6 @@ urlpatterns = [
     path('numbers/<pk>/', views.NumberDetailView.as_view(), name='number_detail'),
     # path('numbers/vk-accs/<pk>/', views.NumberByAccountListView.as_view(), name='numbers_by_account'),
 
-
-
     path('buttons/', views.ButtonsView.as_view(), name='buttons'),
     path('dropdowns/', views.DropdownsView.as_view(), name='dropdowns'),
     path('typography/', views.TypographyView.as_view(), name='typography'),
@@ -47,8 +49,7 @@ urlpatterns = [
     path('error-500/', views.Error500View.as_view(), name='error_500'),
     path('documentation/', views.DocumentationView.as_view(), name='documentation'),
 
-
-    path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")), #todo
+    path('js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),  # todo
     path('messages/js/data.txt', TemplateView.as_view(template_name="data.txt", content_type="text/plain")),
 
     path('vk-accounts/data/', views.get_custom_data, name='custom_data')  # todo убрать начало
